@@ -1,0 +1,52 @@
+body {margin: 0; padding: 0;}
+.bm-link {
+    color: #1c94d2;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+.bm-alert {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    padding: 12px;
+    color: #ffffff;
+    z-index: 1;
+    font-size: 12px;
+    border-radius: 0.25rem;
+    margin: 0 0 30px;
+}
+
+.bm-alert.top-message{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+}
+
+.bm-alert strong, .bm-alert a{color: #ffffff; font-weight: bold;}
+.bm-alert a{text-decoration: underline;}
+
+.bm-alert p{margin: 0;}
+
+.bm-alert.alert-success {
+    background-color: #2fb390;
+    background-image: url(../../src/assets/success.svg);
+    background-repeat: no-repeat;
+    background-position: 5px 14px;
+    padding-left: 32px;
+}
+
+.bm-alert.alert-danger {
+    background-color: #e25822;
+    background-image: url(../../src/assets/warning.svg);
+    background-repeat: no-repeat;
+    background-position: 5px 10px;
+    padding-left: 34px;
+}
+
+.react-fetch-progress-bar {
+    background-color: #1c94d2 !important;
+    height: 10px;
+  }

@@ -1,0 +1,170 @@
+.bm-input {
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #d6e4ec;
+  border-radius: 0.25rem;
+  background: #fbfbfb;
+  height: 40px;
+  padding-left: 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: #aabbc6;
+}
+
+/* .bm-input:not(:disabled):hover {
+  box-shadow: 0px 4px 8px rgba(52, 60, 68, 0.16);
+} */
+
+.bm-input--wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon--pin {
+  background-image: url(../assets/pin.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.input-icon--email {
+  background-image: url(../assets/email.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.input-icon--password {
+  background-image: url(../assets/lock.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.input-icon--person {
+  background-image: url(../assets/person.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.input-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.bm-input:focus {
+  outline: 0;
+  border-color: #d6e4ec;
+  color: #1c94d2;
+}
+
+.input-touched {
+  color: #e25822;
+}
+
+.bm-input.input-touched:focus {
+  color: #e25822;
+}
+
+.input-dirty {
+  color: #e25822;
+}
+
+.bm-input.input-dirty:focus {
+  color: #e25822;
+}
+
+.input-valid {
+  color: #2fb390;
+}
+
+.bm-input.input-valid:focus {
+  color: #2fb390;
+}
+
+.bm-input--state {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  top: -2px;
+  transform: translate(-50%, 0) scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.bm-input:focus + .bm-input--state {
+  transform: translate(0, 0) scale(1);
+  background-color: #1c94d2;
+}
+
+.input-touched + .bm-input--state {
+  transform: translate(0, 0) scale(1);
+  background-color: #e25822;
+}
+
+.bm-input.input-touched:focus + .bm-input--state {
+  transform: translate(0, 0) scale(1);
+  background-color: #e25822;
+}
+
+.input-dirty + .bm-input--state {
+  transform: translate(0, 0) scale(1);
+  background-color: #e25822;
+}
+
+.bm-input.input-dirty:focus + .bm-input--state {
+  transform: translate(0, 0) scale(1);
+  background-color: #e25822;
+}
+
+.input-valid + .bm-input--state {
+  transform: translate(0, 0) scale(1);
+  background-color: #2fb390;
+}
+
+.bm-input.input-valid:focus + .bm-input--state {
+  transform: translate(0, 0) scale(1);
+  background-color: #2fb390;
+}
+
+.input-error {
+  display: block;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+  color: #e25822 !important;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.bm-input:disabled {
+  background: #f3f3f3;
+  color: #c2c2c2;
+}
+
+input:-internal-autofill-selected {
+  background-image: inherit;
+}
+
+.bm-input.no-icon {
+  padding-left: 10px;
+}
+
+.bm-input--wrapper textarea.bm-input {
+  height: auto !important;
+  resize: none;
+}
+
+.posRel {
+  position: relative;
+}
+.posRel a {
+  position: absolute;
+  right: 10px;
+  top: 11px;
+}
+.posRel a i {
+  font-size: 18px;
+}

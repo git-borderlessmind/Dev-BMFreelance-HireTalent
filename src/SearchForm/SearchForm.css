@@ -1,0 +1,11 @@
+.search_wrapper {background: #fff;}
+.search_container {margin: 0; padding: 60px 0;}
+.search_container h3 {font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; line-height: 20px; color: #343C44; position: relative; margin: 0 0 30px 0; padding: 0 0 20px 0;}
+.search_container h3:after {content: ""; position: absolute; left: 0; bottom: 0; width: 32px; height: 2px; background: #1C94D2;}
+.search_container ul {margin: 0; padding: 0; list-style: none;}
+.search_container ul li {display: block; padding-bottom: 30px;}
+.search_container ul li label {display: block; width: 100%; margin: 0; padding: 0 0 10px 0;}
+.search_container ul li span {width: 100%; display: block;}
+.search_container ul li span select {background: #FBFBFB; border: 1px solid #D6E4EC; border-radius: 4px; width: 100%; padding: 10px 15px;}
+.search_container ul li.button {text-align: right;}
+.search_container ul li.button button {background: #1C94D2; box-shadow: 0px 0px 1px rgba(117, 131, 142, 0.04), 0px 2px 4px rgba(52, 60, 68, 0.16); border-radius: 4px; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 16px; color: #FBFBFB; padding: 10px 20px; border: none;}

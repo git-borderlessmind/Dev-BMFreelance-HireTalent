@@ -1,0 +1,17 @@
+header#freelancers {background: #231F20; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); padding: 25px 0; width: 100%; display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between;}
+header .navbar {display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between;}
+header .navbar .navbar-brand, header .navbar .navbar-collapse {width: auto; display: inline-flex; align-items: center; flex-wrap: wrap;}
+header .navbar .navbar-collapse {justify-content: flex-end;}
+header .navbar .navbar-collapse ul li.nav-item {font-weight: normal; font-size: 16px; line-height: 20px; color: #fff; display: inline-flex; align-items: center; padding: 5px 10px;}
+header .navbar .navbar-collapse ul li.nav-item label {margin: 0; padding: 0; display: inline-flex; align-items: center; flex-wrap: wrap;}
+header .navbar .navbar-collapse ul li.nav-item label span..material-icons {display: inline-flex;}
+header .navbar .navbar-collapse ul li.nav-item a.nav-link {color: #fff;}
+header .navbar .navbar-collapse ul li.nav-item.free_trial {background: #1C94D2; box-shadow: 0px 0px 1px rgba(117, 131, 142, 0.04), 0px 2px 4px rgba(52, 60, 68, 0.16); border-radius: 4px; font-style: 400; font-weight: 500; font-size: 16px; color: #FBFBFB; padding: 10px 15px;}
+header .navbar .navbar-collapse ul li.nav-item.free_trial a {padding: 0;}
+header .navbar .navbar-collapse ul li.nav-item.contact_link a {font-weight: normal; font-size: 16px; line-height: 20px; color: #1C94D2;}
+.search_icon {position: relative;}
+#searchBox {margin: 20px 0; display: none; width: 100%; position: relative; margin: 0 0 20px 0;}
+.searchBx {width: 50%; position: relative; margin: 0 auto;}
+#searchBox input.search-box {color: #333; -webkit-box-shadow: 0px 6px 18px -12px rgba(0,0,0,0.42); -moz-box-shadow: 0px 6px 18px -12px rgba(0,0,0,0.42); box-shadow: 0px 6px 18px -12px rgba(0,0,0,0.42); border-radius: 10px; padding: 15px; border: solid 1px #eaeaea; outline: none; background-color: rgb(255, 255, 255, 0.8); border: none; width: 100%;}
+#searchBox .result {position: absolute; z-index: 999; top: 100%; background: white; width: 100%;}
+#dotLine {height: 30px; width: auto; display: none; position: absolute; z-index: 999; border-left: dotted 2px #fff; left: 15px; top: 28px;}

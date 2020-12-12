@@ -1,0 +1,7 @@
+.candidate_listing {margin: 0; padding: 60px 0;}
+.candidate_listing ul {display: flex; align-content: flex-start; flex-wrap: wrap; justify-content: space-between; margin: 0 -15px;}
+.candidate_listing ul li {margin: 0 15px 30px 15px; width: calc(25% - 30px); background: #fff; filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.35));}
+.candidate_listing ul li .img img {max-width: 100%;}
+.candidate_listing ul li .content {padding: 20px;}
+.candidate_listing ul li .content h4 {font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; line-height: 20px; color: #1C94D2; margin: 0; padding: 0;}
+.candidate_listing ul li .content p {font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 12px; line-height: 20px; color: #343C44; margin: 0; padding: 0;}

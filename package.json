@@ -1,0 +1,79 @@
+{
+  "name": "bmfreelance-front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --open",
+    "__start": "react-scripts start",
+    "__build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "email-validator": "^2.0.4",
+    "handlebars": "^4.7.6",
+    "history": "^4.10.1",
+    "html-react-parser": "^0.14.0",
+    "react": "^16.13.1",
+    "react-autosuggest": "^10.0.3",
+    "react-cropper": "^2.1.4",
+    "react-dom": "^16.13.1",
+    "react-dropzone": "^11.2.1",
+    "react-fetch-progressbar": "^1.0.0",
+    "react-file-reader": "^1.1.4",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.4",
+    "react-select": "^3.1.0",
+    "react-webcam": "^5.2.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "style-loader": "^1.3.0",
+    "styled-components": "^5.2.0",
+    "url-loader": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^6.0.22",
+    "@storybook/addon-essentials": "^6.0.22",
+    "@storybook/addon-links": "^6.0.22",
+    "@storybook/node-logger": "^6.0.22",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.22",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "extract-loader": "^5.1.0",
+    "handlebars-loader": "^1.7.1",
+    "html-webpack-plugin": "^3.2.0",
+    "path": "^0.12.7",
+    "react-is": "^16.13.1",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "proxy": "https://bmbackend.demo2clients.com/api"
+}

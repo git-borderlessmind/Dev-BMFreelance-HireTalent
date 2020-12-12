@@ -1,0 +1,32 @@
+/* body{
+    padding:0;
+} */
+
+.bm-auth--layout{
+    display: grid;
+    grid-column-gap: 0;
+    grid-template-columns: 55% 45%;
+    height: 100vh;
+    overflow:auto;
+}
+
+.bm-auth--layout > .col{
+    padding: 0 16px;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.artwork{text-align: center;}
+.artwork svg{max-width: 100%;}
+
+.right_col{
+    background-color: #F9F9F9;
+}
+
+.logo{
+    margin-left: 10%;
+    margin-top: 34px;
+}

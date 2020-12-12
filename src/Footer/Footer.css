@@ -1,0 +1,31 @@
+footer {padding: 0px 0; text-align: left;}
+.footercls {background: #000; border-top: solid 1px; padding: 30px 0 0 0!important;}
+.addressbx {color: #f2f2f2; font-size: 14px; font-family: 'Open Sans',sans-serif;}
+.ftraddress {color: #fff;}
+.addressbx .phCls {font-size: 20px; color: #1c94d2; font-weight: 800; font-family: Montserrat;}
+.footerlinks {margin: 0px; padding: 20px 0;}
+.footerlinks ul {margin: 0px; padding: 0px;}
+.footerlinks ul li, .footerlinks ul li {display: block; padding-bottom: 5px;}
+.footerlinks ul li {color: #797979; font-size: 14px; font-family: 'Open Sans', sans-serif; line-height: 25px;}
+.footerlinks ul li a {color: #f2f2f2 !important;}
+.footerlinks ul li a:hover {color: #f2f2f2 !important; text-decoration: none !important; padding-left: 5px;}
+ul.certifiedLogo {margin: 15px 0 15px 0; text-align: right;}
+ul.certifiedLogo li {display: inline !important; padding-right: 10px; color: #797979;}
+ul.certifiedLogo img, .socialIcons ul li img {width: 85%; margin-bottom: 10px; float: right;}
+.footerLogoBx {width: 100%; padding: 20px 0; margin: 0px; border-top: 1px solid #a3a3a3;}
+.footerLogoBx .flbHeading {text-align: center; font-size: 14px; text-transform: uppercase; color: #1c94d2; font-weight: bold; letter-spacing: 2px; margin-bottom: 10px; position: relative;}
+.footerLogoBx .flbHeading span {position: relative;}
+.footerLogoBx .flbHeading span:before {content: ""; width: 125px; height: 1px; background: #000000; background: -moz-linear-gradient(left, #000000 0%, #1c94d2 100%); background: -webkit-linear-gradient(left, #000000 0%,#1c94d2 100%); background: linear-gradient(to right, #000000 0%,#1c94d2 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#1c94d2',GradientType=1 ); top: 9px; left: -105%; position: absolute; display: inline-block;}
+.footerLogoBx .flbHeading span:after {content: ""; width: 125px; height: 1px; background: #1c94d2; background: -moz-linear-gradient(left, #1c94d2 0%, #000000 100%); background: -webkit-linear-gradient(left, #1c94d2 0%,#000000 100%); background: linear-gradient(to right, #1c94d2 0%,#000000 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c94d2', endColorstr='#000000',GradientType=1 ); top: 9px; right: -105%; position: absolute; display: inline-block;}
+.footerLogoBx ul {padding: 0px; margin: 0px; text-align: center;}
+.footerLogoBx ul li {display: inline-block; padding: 5px 10px;}
+.footerLogoBx ul li img {max-width: 100%;}
+.footerCls {background: #203a70;}
+.copyTxt {display: flex; width: 100%; align-items: center; justify-content: space-between; text-transform: uppercase; font-size: 14px; color: #fff;}
+.copyTxt, .copyTxt {font-size: 14px; font-family: 'Open Sans', sans-serif; padding: 10px 0 !important; color: #5c5c5c !important; width: 100%; border-top: 1px solid #232323;}
+.copyTxt {font-size: 14px; font-family: 'Open Sans', sans-serif; float: left; padding: 10px 0; color: #cecece !important;}
+.fottercopy {display: inline-block; padding-top: 10px; text-align: center !important;}
+.fottercopy p {padding-top: 5px; display: inline; text-transform: uppercase; font-size: 14px; line-height: 1.75;}
+.copyTxt .fottercopy p a {color: #fff;}
+.copyTxt .orcor {color: #febf0f;}
+.fotterLogo {text-align: right; display: inline-block; float: right;}
