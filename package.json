@@ -40,6 +40,7 @@
     "react-cropper": "^2.1.4",
     "react-dom": "^16.13.1",
     "react-dropzone": "^11.2.1",
+    "react-ellipsis-text": "^1.2.1",
     "react-fetch-progressbar": "^1.0.0",
     "react-file-reader": "^1.1.4",
     "react-redux": "^7.2.0",

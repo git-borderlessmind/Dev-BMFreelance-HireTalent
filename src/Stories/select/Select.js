@@ -24,31 +24,41 @@ const customStyles = {
     }),
 }
 
-export const BmSelect = ({ name, placeholder, onInputChange, isDirty, onChange, defaultValue, options, ...props }) => {
-
-
-
-    if (isDirty) {
+export const BmSelect = ({ name, placeholder, onInputChange, isDirty, isDisabled, onChange, defaultValue, options, ...props }) => {
+    const isInputDisabled = isDisabled=="true" ? true : false;
+    if(isInputDisabled){
         <React.Fragment>
             <Select className="bm_select" defaultValue={defaultValue} menuColor="#1C94D2"
                 styles={customStyles}
+                placeholder={placeholder}
                 name={name}
                 options={options}
-                onInputChange={onInputChange} />
-            <span>1</span>
+                onInputChange={onInputChange}
+                disabled="disabled" />
         </React.Fragment>
-    }
-    else {
-        return (
+    } else{
+        if (isDirty) {
             <React.Fragment>
                 <Select className="bm_select" defaultValue={defaultValue} menuColor="#1C94D2"
                     styles={customStyles}
-                    placeholder={placeholder}
                     name={name}
                     options={options}
                     onInputChange={onInputChange} />
-                <span>test2</span>
+                <span>1</span>
             </React.Fragment>
-        );
+        }
+        else {
+            return (
+                <React.Fragment>
+                    <Select className="bm_select" defaultValue={defaultValue} menuColor="#1C94D2"
+                        styles={customStyles}
+                        placeholder={placeholder}
+                        name={name}
+                        options={options}
+                        onInputChange={onInputChange} />
+                    <span>test2</span>
+                </React.Fragment>
+            );
+        }
     }
 }

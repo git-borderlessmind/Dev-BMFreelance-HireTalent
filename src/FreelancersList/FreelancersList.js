@@ -1,121 +1,42 @@
 import React, { useState, useEffect } from "react";
 import "./FreelancersList.css";
+import EllipsisText from "react-ellipsis-text";
 import temp from "../Stories/assets/temp.svg";
 
-
 export const FreelancersList = ({ ...props }) => {
+  const [listfreelancers, setFreelancers] = useState({
+    freelancers: [],
+  });
+  const { freelancers } = listfreelancers;
+
+  useEffect(() => {
+    setFreelancers(props.freelancers);
+  }, [props.freelancers]);
   return (
     <React.Fragment>
       <div className="candidate_listing">
         <ul>
-          <li>
-            <div className="img">
-              <img src={temp} alt="" width="244" />
-            </div>
-            <div className="content">
-              <h4>Akshat Mittal</h4>
-              <p>Full-stack Developer</p>
-            </div>
-          </li>
-          <li>
-            <div className="img">
-              <img src={temp} alt="" />
-            </div>
-            <div className="content">
-              <h4>Chitra Agrawal</h4>
-              <p>Product Manager</p>
-            </div>
-          </li>
-          <li>
-            <div className="img">
-              <img src={temp} alt="" />
-            </div>
-            <div className="content">
-              <h4>Sripal Reddy Vindyal</h4>
-              <p>Front-End Developer</p>
-            </div>
-          </li>
-          <li>
-            <div className="img">
-              <img src={temp} alt="" />
-            </div>
-            <div className="content">
-              <h4>Asif Iqbal</h4>
-              <p>Python Developer</p>
-            </div>
-          </li>
-          <li>
-            <div className="img">
-              <img src={temp} alt="" />
-            </div>
-            <div className="content">
-              <h4>Akshay Sood</h4>
-              <p>Financial Expert</p>
-            </div>
-          </li>
-          <li>
-            <div className="img">
-              <img src={temp} alt="" />
-            </div>
-            <div className="content">
-              <h4>David Anaya</h4>
-              <p>Product Expert</p>
-            </div>
-          </li>
-          <li>
-            <div className="img">
-              <img src={temp} alt="" />
-            </div>
-            <div className="content">
-              <h4>Sohil Singh</h4>
-              <p>MBA Expert</p>
-            </div>
-          </li>
-          <li>
-            <div className="img">
-              <img src={temp} alt="" />
-            </div>
-            <div className="content">
-              <h4>Vignes Aruljothi</h4>
-              <p>IT Project Manager</p>
-            </div>
-          </li>
-          <li>
-            <div className="img">
-              <img src={temp} alt="" />
-            </div>
-            <div className="content">
-              <h4>Abhishek Tyagi</h4>
-              <p>Android Developer</p>
-            </div>
-          </li>
-          <li>
-            <div className="img">
-              <img src={temp} alt="" />
-            </div>
-            <div className="content">
-              <h4>Mehul Gohil</h4>
-              <p>QA Engineer</p>
-            </div>
-          </li>
-          <li>
-            <div className="img">
-              <img src={temp} alt="" />
-            </div>
-            <div className="content">
-              <h4>Gyanesh Changlani</h4>
-              <p>PHP Developer</p>
-            </div>
-          </li>
-          <li>
-            <div className="img">
-              <img src={temp} alt="" />
-            </div>
-            <div className="content">
-              <h4>Aashu Yadav</h4>
-              <p>Finance Expert</p>
-            </div>
-          </li>
+          {freelancers.map((freelancer, index) => {
+            return (
+              <li>
+                <div className="img">
+                  <img
+                    src={
+                      freelancer.profile_photo ? freelancer.profile_photo : temp
+                    }
+                    width="244"
+                    className="usrpics"
+                  />
+                </div>
+                <div className="content">
+                  <h4>{freelancer.name}</h4>
+                  <p>
+                    <EllipsisText text={freelancer.title} length={"20"} />
+                  </p>
+                </div>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </React.Fragment>

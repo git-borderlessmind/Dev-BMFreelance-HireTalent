@@ -166,7 +166,7 @@ export const Footer = ({ ...props }) => {
                 <div className="copyTxt">
                   <div className="fottercopy">
                     <p>
-                      © 2020{" "}
+                      &copy; {(new Date().getFullYear())} {" "}
                       <a href="https://www.borderlessmind.com">
                         BorderlessMind.com
                       </a>{" "}

@@ -1,11 +1,29 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from 'react-redux';
 import { Footer } from "../Footer/Footer";
 import { FreelancersList } from "../FreelancersList/FreelancersList";
 import { Header } from "../Header/Header";
 import { SearchForm } from "../SearchForm/SearchForm";
 import "./HomePage.css";
+import { userActions } from '../_actions';
 
 export const HomePage = ({ ...props }) => {
+  const [listfreelancers, setFeaturedFreelancers] = useState({
+    freelancers: []
+  });
+  const { freelancers } = listfreelancers;
+  const dispatch = useDispatch();
+  function fetchFreelancers() {
+    dispatch(userActions.getFeaturedFreelancers(freelancersdata => {
+      setFeaturedFreelancers(listfreelancers => ({
+        ...listfreelancers,
+        ['freelancers']: freelancersdata.data
+      }));
+    }));
+  }
+  useEffect(() => {
+    fetchFreelancers();
+  }, []);
   return (
     <React.Fragment>
       <div>
@@ -26,7 +44,7 @@ export const HomePage = ({ ...props }) => {
                   offshore Graphic designing resources. Our Graphic designing
                   resources are ready to start working with you in a short time.
                 </p>
-                <a href="hire-talent-step1.html">Hire Best Talent</a>
+                {/* <a href="hire-talent-step1.html">Hire Best Talent</a> */}
               </div>
             </div>
           </div>
@@ -38,7 +56,7 @@ export const HomePage = ({ ...props }) => {
                   <SearchForm />
               </div>
               <div className="col-xl-9 col-lg-9 col-md-8 col-sm-7 col-12">
-                <FreelancersList />
+                <FreelancersList  freelancers={listfreelancers} />
               </div>
             </div>
           </div>

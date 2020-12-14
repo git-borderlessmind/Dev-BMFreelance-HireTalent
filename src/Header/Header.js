@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import logo from '../Stories/assets/logo.svg';
+import logo from "../Stories/assets/logo.svg";
 
 export const Header = ({ ...props }) => {
   return (
@@ -27,34 +27,46 @@ export const Header = ({ ...props }) => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                   <ul className="navbar-nav">
                     <li className="nav-item search_icon">
-                      <label>
-                        <span className="material-icons">search</span> Hire Your
-                        Team
-                      </label>
-                      <div id="dotLine"></div>
+                      <label>Hire Your Team</label>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" aria-current="page" href="#">
+                      <a
+                        className="nav-link"
+                        aria-current="page"
+                        href="https://www.borderlessmind.com/about-us/"
+                      >
                         About Us
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <a
+                        className="nav-link"
+                        href="https://app.hubspot.com/meetings/ishir/speak-with-the-experts-at-borderlessmind"
+                      >
                         Schedule A Call Now
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <a
+                        className="nav-link"
+                        href="https://www.borderlessmind.com/faqs/"
+                      >
                         FAQs
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">
+                      <a
+                        className="nav-link"
+                        href="https://www.borderlessmind.com/blog/"
+                      >
                         Insight
                       </a>
                     </li>
                     <li className="nav-item free_trial">
-                      <a className="nav-link" href="#">
+                      <a
+                        className="nav-link"
+                        href="https://www.borderlessmind.com/free-trial/"
+                      >
                         Free Trial
                       </a>
                     </li>
@@ -66,25 +78,6 @@ export const Header = ({ ...props }) => {
                   </ul>
                 </div>
               </nav>
-              <div id="searchBox">
-                <div className="container">
-                  <div className="col-lg-12 col-sm-12 col-xs-12">
-                    <div className="searchBx">
-                      <input
-                        type="text"
-                        id="custom-search"
-                        className="custom-search search-box"
-                        placeholder="Search a specific skill"
-                        value=""
-                        name="custom-search"
-                      />
-                      <div id="datafetch" className="result">
-                        <span className="material-icons">search</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
