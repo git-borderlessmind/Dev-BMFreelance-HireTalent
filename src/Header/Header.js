@@ -20,7 +20,7 @@ export const Header = ({ ...props }) => {
           <div className="row">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <nav className="navbar navbar-expand-lg navbar-light">
-                <a className="navbar-brand">
+                <a className="navbar-brand" href="https://www.borderlessmind.com/">
                   <img src={logo} alt="" />
                 </a>
                 <button
