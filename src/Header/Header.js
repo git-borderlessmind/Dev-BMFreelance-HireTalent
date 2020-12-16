@@ -37,7 +37,14 @@ export const Header = ({ ...props }) => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                   <ul className="navbar-nav">
                     <li className="nav-item">
-                      <label className="cursor-pointer" onClick={openDialogHireTeam}>Hire Your Team</label>
+                      {/* <label className="cursor-pointer" onClick={openDialogHireTeam}>Hire Your Team</label> */}
+                      <a
+                        className="nav-link"
+                        aria-current="page"
+                        href="/"
+                      >
+                        Hire Your Team
+                      </a>
                     </li>
                     <li className="nav-item">
                       <a
