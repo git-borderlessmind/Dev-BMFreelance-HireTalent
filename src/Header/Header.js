@@ -6,7 +6,8 @@ export const Header = ({ ...props }) => {
   return (
     <React.Fragment>
       <header id="freelancers">
-        <div className="container">
+        <div className="container-fluid">
+          <div className="new_wrapper">
           <div className="row">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <nav className="navbar navbar-expand-lg navbar-light">
@@ -79,6 +80,7 @@ export const Header = ({ ...props }) => {
                 </div>
               </nav>
             </div>
+          </div>
           </div>
         </div>
       </header>

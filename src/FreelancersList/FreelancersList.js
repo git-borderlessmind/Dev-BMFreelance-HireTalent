@@ -31,7 +31,7 @@ export const FreelancersList = ({ ...props }) => {
                 <div className="content">
                   <h4>{freelancer.name}</h4>
                   <p>
-                    <EllipsisText text={freelancer.title} length={"20"} />
+                    {/* <EllipsisText text={freelancer.title} length={"20"} /> */}
                   </p>
                 </div>
               </li>

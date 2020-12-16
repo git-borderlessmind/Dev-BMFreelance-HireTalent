@@ -15,3 +15,9 @@ header .navbar .navbar-collapse ul li.nav-item.contact_link a {font-weight: norm
 #searchBox input.search-box {color: #333; -webkit-box-shadow: 0px 6px 18px -12px rgba(0,0,0,0.42); -moz-box-shadow: 0px 6px 18px -12px rgba(0,0,0,0.42); box-shadow: 0px 6px 18px -12px rgba(0,0,0,0.42); border-radius: 10px; padding: 15px; border: solid 1px #eaeaea; outline: none; background-color: rgb(255, 255, 255, 0.8); border: none; width: 100%;}
 #searchBox .result {position: absolute; z-index: 999; top: 100%; background: white; width: 100%;}
 #dotLine {height: 30px; width: auto; display: none; position: absolute; z-index: 999; border-left: dotted 2px #fff; left: 15px; top: 28px;}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    header .navbar {padding-left: 0; padding-right: 0;}
+    header .navbar .navbar-brand {max-width: 220px;}
+    header .navbar .navbar-brand img {max-width: 100%;}
+}
