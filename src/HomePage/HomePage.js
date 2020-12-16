@@ -29,7 +29,7 @@ export const HomePage = ({ ...props }) => {
       <div>
         <Header />
         <section id="freelancers_banner">
-          <div className="container">
+          <div className="container-fluid">
             <div className="row">
               <div className="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12 offset-xl-2 offset-lg-2 offset-md-1 offset-sm-0 offset-0">
                 <h1>
@@ -50,7 +50,7 @@ export const HomePage = ({ ...props }) => {
           </div>
         </section>
         <section id="free_inner_content">
-          <div className="container">
+          <div className="container-fluid">
             <div className="row">
               <div className="col-xl-3 col-lg-3 col-md-4 col-sm-5 col-12 search_wrapper">
                   <SearchForm />

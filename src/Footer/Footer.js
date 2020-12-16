@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./Footer.css";
-/*import inc5000logo from "../Stories/assets/inc-5000-logo.svg";
-import texasexeslogo from "../Stories/assets/texas-exes-logo.svg";
-import mbelogo from "../Stories/assets/mbe-logo.svg";
-import smallbusinesseslogo from "../Stories/assets/10000-small-businesses-logo.svg";
-import eqlogo from "../Stories/assets/eq-logo.svg";
-import bizwnersedlogo from "../Stories/assets/biz-wnersed-logo.svg";
-import inc5000logo1 from "../Stories/assets/inc5000_logo.svg";*/
+import inc5000logo from "../Stories/assets/inc-5000-logo.png";
+import texasexeslogo from "../Stories/assets/texas-exes-logo.png";
+import mbelogo from "../Stories/assets/mbe-logo.png";
+import smallbusinesseslogo from "../Stories/assets/10000-small-businesses-logo.png";
+import eqlogo from "../Stories/assets/eq-logo.png";
+import bizwnersedlogo from "../Stories/assets/biz-wnersed-logo.png";
+import inc5000logo1 from "../Stories/assets/inc5000_logo.png";
 
 export const Footer = ({ ...props }) => {
   return (
     <React.Fragment>
       <footer>
         <div className="footercls">
-          <div className="container">
+          <div className="container-fluid">
             <div className="row">
               <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
                 <div className="addressbx">
@@ -120,7 +120,7 @@ export const Footer = ({ ...props }) => {
                 <ul className="certifiedLogo">
                   <li>
                     <a target="_blank" href="https://www.inc.com/profile/ishir">
-                      {/* <img src={inc5000logo1} alt="" /> */}
+                      <img src={inc5000logo1} alt="" />
                     </a>
                   </li>
                 </ul>
@@ -132,7 +132,7 @@ export const Footer = ({ ...props }) => {
                       <div className="flbHeading">
                         <span>Alumni from</span>
                       </div>
-                      {/* <ul>
+                      <ul>
                         <li>
                           <img src={inc5000logo} alt="" />
                         </li>
@@ -151,7 +151,7 @@ export const Footer = ({ ...props }) => {
                         <li>
                           <img src={bizwnersedlogo} alt="" />
                         </li>
-                      </ul> */}
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ export const Footer = ({ ...props }) => {
           </div>
         </div>
         <div className="footerCls">
-          <div className="container">
+          <div className="container-fluid">
             <div className="row">
               <div className="col-lg-12 col-sm-12 col-xs-12">
                 <div className="copyTxt">

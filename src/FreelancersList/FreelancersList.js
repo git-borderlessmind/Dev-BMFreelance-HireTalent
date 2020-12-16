@@ -18,7 +18,7 @@ export const FreelancersList = ({ ...props }) => {
         <ul>
           {freelancers.map((freelancer, index) => {
             return (
-              <li>
+              <li key={index}>
                 <div className="img">
                   <img
                     src={
@@ -31,7 +31,9 @@ export const FreelancersList = ({ ...props }) => {
                 <div className="content">
                   <h4>{freelancer.name}</h4>
                   <p>
-                    <EllipsisText text={freelancer.title} length={"20"} />
+                  {freelancer.title &&
+                    <EllipsisText text={freelancer.title} length={20} />
+                  }
                   </p>
                 </div>
               </li>
