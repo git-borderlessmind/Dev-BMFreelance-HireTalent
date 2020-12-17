@@ -30,6 +30,9 @@ export const Input = ({ customClass, value, hasIcon,pattern, isEmailValid, confi
   else if (icontype == 'input-icon--email') {
     inputIcon = <div className="input-icon input-icon--email"></div>
   }
+  else if (icontype == 'input-icon--company') {
+    inputIcon = <div className="input-icon input-icon--company"></div>
+  }
   else {
     inputIcon = '';
   }
@@ -396,7 +399,7 @@ Input.propTypes = {
   type: PropTypes.oneOf(['text', 'password', 'email']),
   value: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
-  icon: PropTypes.oneOf(['email', 'password', 'pin', 'person']),
+  icon: PropTypes.oneOf(['email', 'password', 'pin', 'person', 'company']),
   onChange: PropTypes.func,
   isTouched: PropTypes.bool,
   isDirty: PropTypes.bool,

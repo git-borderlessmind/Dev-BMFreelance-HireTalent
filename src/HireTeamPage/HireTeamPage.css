@@ -702,6 +702,7 @@
 }
 .step_form {
   padding: 30px 0;
+  max-width: 470px;
 }
 .step_form input[type="text"],
 .step_form input[type="email"] {
@@ -713,7 +714,6 @@
   font-size: 14px;
   line-height: 20px;
   color: #343c44;
-  max-width: 470px;
   width: 100%;
   padding: 10px 15px 10px 50px;
 }
@@ -732,17 +732,16 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.step_form .checkbox {
+.step_form .checkterms {
   max-width: 470px;
   width: 100%;
 }
-.step_form .checkbox label {
+.step_form .checkterms label {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 11px;
   line-height: 14px;
   color: #343c44;
-  padding-left: 35px;
 }
 
 .react-autosuggest__container {
@@ -813,10 +812,38 @@
   cursor: pointer;
 }
 
+.autosuggest-container{
+  width: 50%;
+}
 .react-autosuggest__container {
   width: 100%;
 }
 .react-autosuggest__input {
   width: 100%;
   max-width: 100%;
+}
+.chips_listing li {
+  cursor: pointer;
+}
+
+.react-autosuggest__suggestions-container.react-autosuggest__suggestions-container--open {
+  width: 100%;
+  top: 39px !important;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.react-autosuggest__suggestions-list {
+  width: 100% !important;
+  top: 39px !important;
+}
+.react-autosuggest__suggestion span {
+  font-size: 16px !important;
+  color: #343c44 !important;
+}
+.react-autosuggest__suggestion--highlighted {
+  background: #1c94d2;
+}
+.react-autosuggest__suggestion--highlighted span {
+  background: #1c94d2;
+  color: #fff !important;
 }

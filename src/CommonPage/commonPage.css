@@ -1,0 +1,9 @@
+.page_title{
+    margin: 0;
+}
+
+.common_page_header .progress_bar, .common_page_header .onboarding-header--right {display: none;}
+
+.commonpage_wrapper .bm-card {width: 100%; max-width: 100%; margin: 50px 0;}
+.commonpage_wrapper .bm-card .page_title h1 {font-family: "Montserrat", sans-serif; font-size: 24px; margin: 0 0 30px; font-weight: normal; position: relative;}
+.commonpage_wrapper .bm-card .page_title h1:before {content: ""; position: absolute; width: 6px; height: 40px; transform: translate(-50px, -5px); background-color: #343c44;}

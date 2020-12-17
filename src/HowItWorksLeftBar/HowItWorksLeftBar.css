@@ -1,0 +1,171 @@
+.hire_lft_con.step5_bg {
+  background: url(../Stories/assets/step-five-bg.png) no-repeat center center !important;
+  background-size: 100% 100% !important;
+  justify-content: center !important;
+  align-content: center;
+}
+.step5_bg h1 {
+  margin: 0 0 20px 0;
+  padding: 0 0 10px 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.step5_bg h1:after {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  content: "";
+  background: #fff;
+  width: 60px;
+  height: 2px;
+}
+.step5_bg p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #fff;
+  margin: 0 0 10px 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+.step5_bg p span {
+  color: #398bc8;
+}
+.step5_bg ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.step5_bg ul li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  padding-top: 46px;
+  padding-bottom: 10px;
+}
+.step5_bg ul li:before {
+  content: "";
+  background: url(../Stories/assets/step-five-li-sep.svg) no-repeat;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 37px;
+}
+.step5_bg ul li span.icon {
+  width: 100%;
+  text-align: center;
+}
+.step5_bg ul li span.icon img {
+  max-width: 100%;
+}
+.step5_bg ul li p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 21px;
+  color: #fcfcfc;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
+    padding: 50px 0 0 0;
+    height: calc(100% - 100px);
+  }
+  .hire_lft_con.step5_bg {
+    display: none !important;
+  }
+  .hire_rht_con.step_five_content {
+    width: 100% !important;
+  }
+  #hire_talent_content
+    .hire_tal_con_wrapper
+    .hire_rht_con.step_five_content
+    .inner_rht_content {
+    padding-right: 8.333333%;
+  }
+
+  #hire_talent_content.step_five_close_btn .close {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
+    padding: 100px 0 0 0;
+    height: calc(100% - 100px);
+  }
+  .hire_lft_con.step5_bg {
+    display: none !important;
+  }
+  .hire_rht_con.step_five_content {
+    width: 100% !important;
+  }
+  #hire_talent_content
+    .hire_tal_con_wrapper
+    .hire_rht_con.step_five_content
+    .inner_rht_content {
+    padding-right: 8.333333%;
+  }
+
+  #hire_talent_content.step_five_close_btn .close {
+    top: 30px;
+    right: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hire_lft_con.step5_bg {
+    display: none !important;
+  }
+  .hire_rht_con.step_five_content {
+    width: 100% !important;
+  }
+  #hire_talent_content
+    .hire_tal_con_wrapper
+    .hire_rht_con.step_five_content
+    .inner_rht_content {
+    padding-right: 8.333333%;
+  }
+
+  #hire_talent_content .close {
+    right: 20px;
+    top: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hire_lft_con.step5_bg {
+    display: none !important;
+  }
+  .hire_rht_con.step_five_content {
+    width: 100% !important;
+  }
+  #hire_talent_content
+    .hire_tal_con_wrapper
+    .hire_rht_con.step_five_content
+    .inner_rht_content {
+    padding-right: 8.333333%;
+    max-width: calc(100% - 8.333333%);
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+}

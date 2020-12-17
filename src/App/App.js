@@ -6,6 +6,7 @@ import { alertActions } from '../_actions';
 import './app.css';
 import { progressBarFetch, setOriginalFetch, ProgressBar } from 'react-fetch-progressbar';
 import { HireTeamPage } from '../HireTeamPage/HireTeamPage';
+import { CommonPage } from '../CommonPage/CommonPage';
  
 // Let react-fetch-progressbar know what the original fetch is.
 setOriginalFetch(window.fetch);
@@ -36,7 +37,10 @@ function App() {
             }
             <Router history={history}>
                 <Switch>              
-                    <Route path="/" component={HireTeamPage} />
+                    <Route exact path="/" component={HireTeamPage} />
+                    <Route exact path="/terms-and-conditions" component={CommonPage} />
+                    <Route exact path="/privacy-policy" component={CommonPage} />
+                    <Route exact path="/cookie-policy" component={CommonPage} />
                     <Redirect from="*" to="/" />
                 </Switch>
             </Router>

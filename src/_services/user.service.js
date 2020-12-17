@@ -7,7 +7,8 @@ export const userService = {
     getalljobtypes,
     getalljobtypeswithskills,
     getJobTypeSkills,
-    searchFreelancers
+    searchFreelancers,
+    submitHireTalentRequest
 };
 
 function getAccessToken(){
@@ -97,4 +98,15 @@ function searchFreelancers(searchcriteria) {
     };
 
     return fetch(`${config.apiUrl}/api/bm/searchFreelancers`, requestOptions).then(handleResponse);
+}
+
+function submitHireTalentRequest(requestdata) {
+    const requestOptions = {
+        crossDomain:true,
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestdata)
+    };
+
+    return fetch(`${config.apiUrl}/api/bm/submithiretalentrequest`, requestOptions).then(handleResponse);
 }

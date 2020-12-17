@@ -46,6 +46,12 @@
   background-position: 10px center;
 }
 
+.input-icon--company {
+  background-image: url(../assets/company_icon.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
 .input-icon {
   position: absolute;
   top: 0;

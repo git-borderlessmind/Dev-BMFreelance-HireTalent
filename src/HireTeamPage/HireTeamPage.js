@@ -1,18 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Header } from "../Header/Header";
-import { Footer } from "../Footer/Footer";
+//import { Header } from "../Header/Header";
+//import { Footer } from "../Footer/Footer";
+import { HowItWorksLeftBar } from "../HowItWorksLeftBar/HowItWorksLeftBar";
 import "./HireTeamPage.css";
 import { userActions } from "../_actions";
 import hiringstepbg from "../Stories/assets/hiring-step-bg.jpg";
 import { Textarea } from "../Stories/Textarea/Textarea";
-import AutoSuggest from 'react-autosuggest';
+import AutoSuggest from "react-autosuggest";
+import { Link } from "react-router-dom";
+import { Button } from "../Stories/button/Button";
+import { Input } from "../Stories/input/Input";
+import * as EmailValidator from "email-validator";
 
 export const HireTeamPage = ({ ...props }) => {
+  const [allowedcharlength, setAllowedCharLength] = useState(1000);
+  const [charsleft, setCharsLeft] = useState(1000);
   const [jobtypes, setJobTypes] = useState([]);
   const [job_type, setSelectedJobType] = useState("");
   const [job_type_title, setSelectedJobTypeTitle] = useState("");
   const [skills, setSkills] = useState([]);
+  const [selectedskills, setSelectedSkills] = useState([]);
   const [value, setValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [lowerCasedSkills, setLowerCasedSkills] = useState([]);
@@ -24,8 +32,18 @@ export const HireTeamPage = ({ ...props }) => {
   );
   const [numberofresources, setSelectedNumberOfResources] = useState("Only 1");
   const [desired_areas_of_expertise, setDesiredAreasOfExpertise] = useState("");
-
   const [displaystep, setDisplayStep] = useState("1");
+  const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
+  const [contactname, setContactName] = useState("");
+  const [emailTouched, setEmailTouched] = useState(false);
+  const [companyTouched, setCompanyTouched] = useState(false);
+  const [contactnameTouched, setContactnameTouched] = useState(false);
+  const [validemail, checkValidEmail] = useState(false);
+  const [propcessing, setProcessing] = useState(false);
+  const [successmessage, setSuccessMessage] = useState("");
+  const [errormessage, setErrorMessage] = useState("");
+
   const dispatch = useDispatch();
   const renderHTML = (rawHTML) =>
     React.createElement("div", {
@@ -37,11 +55,11 @@ export const HireTeamPage = ({ ...props }) => {
   }, []);
 
   function getSuggestions(value) {
-    return lowerCasedSkills.filter(skl =>
+    return lowerCasedSkills.filter((skl) =>
       skl.name.includes(value.trim().toLowerCase())
     );
   }
-  
+
   function fetchJobTypes() {
     dispatch(
       userActions.getalljobtypeswithskills((datajobtypes) => {
@@ -82,17 +100,36 @@ export const HireTeamPage = ({ ...props }) => {
           });
         });
         setSkills(skillsarray);
-        setSuggestions(allskillsarray);
         setSelectedJobTypeTitle(dataskills.jobtype.title);
+
+        if (allskillsarray.length) {
+          let lowerCasedSkills = allskillsarray.map((skl) => {
+            return {
+              id: skl.value,
+              name: skl.label.toLowerCase(),
+            };
+          });
+          setLowerCasedSkills(lowerCasedSkills);
+        }
       })
     );
+  }
+  function addMoreSkills(selectedSkill) {
+    lowerCasedSkills.forEach((element) => {
+      if (element.name == selectedSkill) {
+        addSelectedSkills(null, {
+          value: element.id,
+          label: element.name,
+        });
+      }
+    });
+    setValue("");
   }
 
   function handleChangeJobType(e) {
     setSelectedJobType(e.target.value);
   }
   function handleChangeTypeOfProject(e) {
-    console.log("handleChangeTypeOfProject");
     setSelectedTypeOfProject(e.target.value);
   }
   function handleChangeDurationOfProject(e) {
@@ -103,6 +140,63 @@ export const HireTeamPage = ({ ...props }) => {
   }
   function handleChangeDesiredAreasOfExpertise(e) {
     setDesiredAreasOfExpertise(e.target.value);
+    var len = e.target.value.length;
+    var remainchars = parseInt(allowedcharlength) - parseInt(len);
+    setCharsLeft(remainchars);
+  }
+  function addSelectedSkills(e, s) {
+    const newselectedskillsarray = [];
+    var skillalreadyadded = false;
+    selectedskills.forEach((element) => {
+      if (element.value == s.value) {
+        skillalreadyadded = true;
+      }
+      newselectedskillsarray.push({
+        value: element.value,
+        label: element.label,
+      });
+    });
+    if (!skillalreadyadded) {
+      newselectedskillsarray.push({
+        value: s.value,
+        label: s.label,
+      });
+    }
+    setSelectedSkills(newselectedskillsarray);
+  }
+  function removeSelectedSkills(e, s) {
+    const newselectedskillsarray = [];
+    selectedskills.forEach((element) => {
+      if (element.value != s.value) {
+        newselectedskillsarray.push({
+          value: element.value,
+          label: element.label,
+        });
+      }
+    });
+    setSelectedSkills(newselectedskillsarray);
+  }
+
+  function handleChangeEmail(e) {
+    setEmail(e.target.value);
+    setEmailTouched(true);
+    validateEmail(e.target.value);
+  }
+  function validateEmail(e) {
+    var emailValid = EmailValidator.validate(e);
+    if (emailValid) {
+      checkValidEmail(true);
+    } else {
+      checkValidEmail(false);
+    }
+  }
+  function handleChangeCompany(e) {
+    setCompany(e.target.value);
+    setCompanyTouched(true);
+  }
+  function handleChangeContactName(e) {
+    setContactName(e.target.value);
+    setContactnameTouched(true);
   }
 
   function handleStepOne() {
@@ -117,6 +211,41 @@ export const HireTeamPage = ({ ...props }) => {
   function handleStepFour() {
     setDisplayStep("5");
   }
+  function handleStepFive() {
+    setDisplayStep("6");
+  }
+  function handleStepSix() {
+    setEmailTouched(true);
+    setCompanyTouched(true);
+    setContactnameTouched(true);
+
+    var requestdata = {
+      job_type: job_type,
+      typeofproject: typeofproject,
+      durationofproject: durationofproject,
+      numberofresources: numberofresources,
+      desired_areas_of_expertise: desired_areas_of_expertise,
+      selectedskills: selectedskills,
+      email: email,
+      company: company,
+      contactname: contactname,
+    };
+    if (email != "" && company != "" && contactname != "") {
+      setProcessing(true);
+      dispatch(
+        userActions.submitHireTalentRequest(requestdata, (returndata) => {
+          setProcessing(false);
+          if (returndata.status == "success") {
+            setSuccessMessage(returndata.message);
+            ShowSucessPage();
+          }
+          if (returndata.status == "error") {
+            setErrorMessage(returndata.message);
+          }
+        })
+      );
+    }
+  }
 
   function ShowStepOne() {
     setDisplayStep("1");
@@ -127,19 +256,32 @@ export const HireTeamPage = ({ ...props }) => {
   function ShowStepThree() {
     setDisplayStep("3");
   }
+  function ShowStepFour() {
+    setDisplayStep("4");
+  }
+  function ShowStepFive() {
+    setDisplayStep("5");
+  }
+  function ShowStepSix() {
+    setDisplayStep("6");
+  }
+  function ShowSucessPage() {
+    setDisplayStep("7");
+  }
 
   useEffect(() => {
-    fetchSkills(job_type);
+    if (job_type != "") {
+      fetchSkills(job_type);
+    }
   }, [job_type]);
-  
 
   return (
     <React.Fragment>
       <div>
-        <Header />
+        {/* <Header /> */}
         <section id="hire_talent_content">
           <div className="hire_tal_con_wrapper">
-            <div
+            {/* <div
               className="hire_lft_con"
               style={{ backgroundImage: `url(${hiringstepbg})` }}
             >
@@ -149,7 +291,8 @@ export const HireTeamPage = ({ ...props }) => {
                   <p>Thank you for showing your interest in us</p>
                 </div>
               </div>
-            </div>
+            </div> */}
+            <HowItWorksLeftBar />
             <div className="hire_rht_con">
               <div
                 className={
@@ -577,58 +720,215 @@ export const HireTeamPage = ({ ...props }) => {
                 <div className="steps_content">
                   <div className="textarea">
                     <Textarea
+                      maxlength={allowedcharlength}
                       placeholder="Desired areas of expertise (e.g., Javascript, Ruby etc )"
                       name="desired_areas_of_expertise"
                       value={desired_areas_of_expertise}
                       onChange={handleChangeDesiredAreasOfExpertise}
                     ></Textarea>
-                    {/* <label>5000 character left</label> */}
+                    <label>{charsleft} characters left</label>
                   </div>
                   <ul className="chips_listing">
-                    <li className="selected">+ Javascript</li>
-                    <li className="selected">+ CSS</li>
+                    {selectedskills.map((selectedskill, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="selected"
+                          onClick={(e) =>
+                            removeSelectedSkills(e, selectedskill)
+                          }
+                        >
+                          x&nbsp; {renderHTML(selectedskill.label)}
+                        </li>
+                      );
+                    })}
                   </ul>
-                  <div className="popular_skills">
-                    <label>Popular skills for {job_type_title}</label>
+                  <div className="autosuggest-container">
                     <AutoSuggest
-                        suggestions={suggestions}
-                        onSuggestionsClearRequested={() => setSuggestions([])}
-                        onSuggestionsFetchRequested={({ value }) => {
-                            setValue(value);
-                            setSuggestions(getSuggestions(value));
-                        }}
-                        onSuggestionSelected={(_, { suggestionValue }) =>
-                            //console.log("Selected: " + suggestionValue);
-                            addMoreSkills(suggestionValue)
-                        }
-                        getSuggestionValue={suggestion => suggestion.name}
-                        renderSuggestion={suggestion => <span>{suggestion.name}</span>}
-                        inputProps={{
-                        placeholder: "Search Skill name (e.g: Angular, Figma, PHP etc)",
+                      suggestions={suggestions}
+                      onSuggestionsClearRequested={() => setSuggestions([])}
+                      onSuggestionsFetchRequested={({ value }) => {
+                        setValue(value);
+                        setSuggestions(getSuggestions(value));
+                      }}
+                      onSuggestionSelected={(_, { suggestionValue }) =>
+                        //console.log("Selected: " + suggestionValue);
+                        addMoreSkills(suggestionValue)
+                      }
+                      getSuggestionValue={(suggestion) => suggestion.name}
+                      renderSuggestion={(suggestion) => (
+                        <span>{suggestion.name}</span>
+                      )}
+                      inputProps={{
+                        placeholder: "Search Skill name",
                         value: value,
                         onChange: (_, { newValue, method }) => {
-                            setValue(newValue);
-                        }
-                        }}
-                        highlightFirstSuggestion={true}
+                          setValue(newValue);
+                        },
+                      }}
+                      highlightFirstSuggestion={true}
                     />
+                  </div>
+                  <div className="popular_skills">
+                    <label>
+                      Popular skills for<b>&nbsp;{job_type_title}</b>
+                    </label>
                   </div>
                   <ul className="chips_listing">
                     {skills.map((skill, index) => {
-                      return <li key={index}>+ {skill.label}</li>;
+                      return (
+                        <li
+                          key={index}
+                          onClick={(e) => addSelectedSkills(e, skill)}
+                        >
+                          + {renderHTML(skill.label)}
+                        </li>
+                      );
                     })}
                   </ul>
                 </div>
                 <div className="buttons_wrapper">
-                  <button className="white left">Skip for now</button>
-                  <button className="white">Back</button>
-                  <button className="blue">Next</button>
+                  <button className="white left" onClick={ShowStepSix}>
+                    Skip for now
+                  </button>
+                  <button className="white" onClick={ShowStepFour}>
+                    Back
+                  </button>
+                  <button className="blue" onClick={handleStepFive}>
+                    Next
+                  </button>
+                </div>
+              </div>
+
+              <div
+                className={
+                  displaystep == "6" ? "inner_rht_content" : "hide_dialog"
+                }
+              >
+                {errormessage != "" && (
+                  <div className={"bm-alert alert-danger"}>
+                    <p>{errormessage}</p>
+                  </div>
+                )}
+
+                <div className="rht_content_header">
+                  <h2>Successful! Let us connect you with the talent.</h2>
+                  <div className="step_nos">
+                    Step <span>6</span> of <span>6</span>
+                  </div>
+                </div>
+                <div className="step_pro_bar step_six">
+                  <div className="step_pro_hightlight"></div>
+                </div>
+                <div className="steps_content">
+                  <div className="step_form">
+                    <span className="email_field">
+                      <Input
+                        icon="email"
+                        placeholder="Email"
+                        type="email"
+                        name="email"
+                        hasIcon={true}
+                        value={email}
+                        onChange={handleChangeEmail}
+                        onBlur={handleChangeEmail}
+                        isDirty={emailTouched && !email ? true : false}
+                        isTouched={emailTouched}
+                        isEmailValid={validemail ? true : false}
+                      />
+                    </span>
+                    <span className="company_field">
+                      <Input
+                        icon="company"
+                        placeholder="Company Name"
+                        type="text"
+                        name="company"
+                        hasIcon={true}
+                        value={company}
+                        onChange={handleChangeCompany}
+                        onBlur={handleChangeCompany}
+                        isDirty={companyTouched && !company ? true : false}
+                        isTouched={companyTouched}
+                        isValid={company ? true : false}
+                      />
+                    </span>
+                    <span className="contact_field">
+                      <Input
+                        icon="person"
+                        placeholder="Contact Name"
+                        type="text"
+                        name="contactname"
+                        hasIcon={true}
+                        value={contactname}
+                        onChange={handleChangeContactName}
+                        onBlur={handleChangeContactName}
+                        isDirty={
+                          contactnameTouched && !contactname ? true : false
+                        }
+                        isTouched={contactnameTouched}
+                        isValid={contactname ? true : false}
+                      />
+                    </span>
+                    <div className="checkterms">
+                      <label htmlFor="acknowledgement">
+                        By submitting you acknowledge that you have read and
+                        agree to our&nbsp;
+                        <Link
+                          to="/terms-and-conditions"
+                          target="_blank"
+                          className="bm-link"
+                        >
+                          Terms and Conditions
+                        </Link>
+                        ,&nbsp;
+                        <Link
+                          to="/privacy-policy"
+                          target="_blank"
+                          className="bm-link"
+                        >
+                          Privacy Policy
+                        </Link>{" "}
+                        and&nbsp;
+                        <Link
+                          to="/cookie-policy"
+                          target="_blank"
+                          className="bm-link"
+                        >
+                          Cookie Policy
+                        </Link>
+                        .
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div className="buttons_wrapper">
+                  <button className="white" onClick={ShowStepFive}>
+                    Back
+                  </button>
+                  <Button
+                    customClass="blue"
+                    primary
+                    type="button"
+                    label="Connect Me With Talent"
+                    loader={propcessing}
+                    onClick={handleStepSix}
+                  />
+                </div>
+              </div>
+
+              <div
+                className={
+                  displaystep == "7" ? "inner_rht_content" : "hide_dialog"
+                }
+              >
+                <div className="bm-alert alert-success">
+                  <p>{successmessage}</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </React.Fragment>
   );
