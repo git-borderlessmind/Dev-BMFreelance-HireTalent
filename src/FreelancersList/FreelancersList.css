@@ -1,40 +1,61 @@
-.candidate_listing {
-  margin: 0;
-  padding: 60px 0;
+#free_inner_content {background: rgb(255,255,255); background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(249,249,249,1) 25%, rgba(249,249,249,1) 100%); background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 25%,rgba(249,249,249,1) 25%,rgba(249,249,249,1) 100%); background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 25%,rgba(249,249,249,1) 25%,rgba(249,249,249,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f9f9f9',GradientType=1 );}
+.search_wrapper {background: #fff;}
+.search_container {margin: 0; padding: 60px 0;}
+.search_container h3 {font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; line-height: 20px; color: #343C44; position: relative; margin: 0 0 30px 0; padding: 0 0 20px 0;}
+.search_container h3:after {content: ""; position: absolute; left: 0; bottom: 0; width: 32px; height: 2px; background: #1C94D2;}
+.search_container ul {margin: 0; padding: 0; list-style: none;}
+.search_container ul li {display: block; padding-bottom: 30px;}
+.search_container ul li label {display: block; width: 100%; margin: 0; padding: 0 0 10px 0;}
+.search_container ul li span {width: 100%; display: block;}
+.search_container ul li span select {background: #FBFBFB; border: 1px solid #D6E4EC; border-radius: 4px; width: 100%; padding: 10px 15px;}
+.search_container ul li.button {text-align: right;}
+.search_container ul li.button button {background: #1C94D2; box-shadow: 0px 0px 1px rgba(117, 131, 142, 0.04), 0px 2px 4px rgba(52, 60, 68, 0.16); border-radius: 4px; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 16px; color: #FBFBFB; padding: 10px 20px; border: none;}
+#free_inner_content .candidate_listing {margin: 0; padding: 60px 0;}
+#free_inner_content .candidate_listing ul {display: flex; align-content: flex-start; flex-wrap: wrap; justify-content: flex-start; margin: 0 -15px;}
+#free_inner_content .candidate_listing ul li {list-style: none; margin: 0 15px 30px 15px; width: calc(25% - 30px); background: #fff; filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.35));}
+#free_inner_content .candidate_listing ul li .img img {max-width: 100%;}
+#free_inner_content .candidate_listing ul li .content {padding: 20px;}
+#free_inner_content .candidate_listing ul li .content h4 {font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; line-height: 20px; color: #1C94D2; margin: 0; padding: 0;}
+#free_inner_content .candidate_listing ul li .content p {font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 12px; line-height: 20px; color: #343C44; margin: 0; padding: 0;}
+
+/* .candidate_listing {margin: 0; padding: 60px 0;}
+.candidate_listing ul {display: flex; align-content: flex-start; flex-wrap: wrap; justify-content: flex-start; margin: 0 -15px; list-style: none;}
+.candidate_listing ul li {margin: 0 15px 30px 15px; width: calc(25% - 30px); background: #fff; filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.35));}
+.candidate_listing ul li .img img {max-width: 100%;}
+.candidate_listing ul li .content {padding: 20px;}
+.candidate_listing ul li .content h4 {font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 16px; line-height: 20px; color: #1C94D2; margin: 0; padding: 0;}
+.candidate_listing ul li .content p {font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 12px; line-height: 20px; color: #343C44; margin: 0; padding: 0;} */
+
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+    .search_container ul li.button {padding-bottom: 0;}
+    #free_inner_content {background: #F9F9F9;}
+    #free_inner_content .candidate_listing ul {padding: 0;}
+    #free_inner_content .candidate_listing ul li {width: calc(50% - 30px);}
+    #free_inner_content .candidate_listing ul li .content h4 {font-size: 15px;}
+    #free_inner_content .candidate_listing ul li .content p {font-size: 11px;}
+    #free_inner_content .candidate_listing ul li .img img {width: 100%; max-width: auto;}
 }
-.candidate_listing ul {
-  display: flex;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 -15px;
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    #freelancers_banner h1 {font-size: 23px;}
+    #freelancers_banner p {font-size: 15px;}
+    #free_inner_content .candidate_listing ul {padding: 0;}
+    #free_inner_content .candidate_listing ul li {width: calc(100% - 30px);}
+    #free_inner_content .candidate_listing ul li .img img {width: 100%; max-width: auto;}
 }
-.candidate_listing ul li {
-  margin: 0 15px 30px 15px;
-  width: calc(25% - 30px);
-  background: #fff;
-  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.35));
-  list-style-type: none;
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #freelancers_banner h1 {font-size: 23px;}
+    #freelancers_banner p {font-size: 15px;}
+    #free_inner_content .candidate_listing ul {padding: 0;}
+    #free_inner_content .candidate_listing ul li {width: calc(50% - 30px);}
+    #free_inner_content .candidate_listing ul li .img img {width: 100%; max-width: auto;}
 }
-/*.candidate_listing ul li .img img /*max-width: 100%;*/
-.candidate_listing ul li .content {
-  padding: 20px;
-}
-.candidate_listing ul li .content h4 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #1c94d2;
-  margin: 0;
-  padding: 0;
-}
-.candidate_listing ul li .content p {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 20px;
-  color: #343c44;
-  margin: 0;
-  padding: 0;
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #freelancers_banner h1 {font-size: 23px;}
+    #freelancers_banner p {font-size: 15px;}
+    #free_inner_content .candidate_listing ul {padding: 0;}
+    #free_inner_content .candidate_listing ul li {width: calc(33.33334% - 30px);}
+    #free_inner_content .candidate_listing ul li .img img {width: 100%; max-width: auto;}
 }

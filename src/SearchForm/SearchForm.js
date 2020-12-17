@@ -112,6 +112,17 @@ export const SearchForm = ({ ...props }) => {
                     (obj) => obj.value === searchcriteria.job_type
                   )}
                   onChange={handleJobTypeChange}
+                  theme={(theme) => ({
+                    ...theme,
+                    borderRadius: '0.25rem',
+                    colors: {
+                    ...theme.colors,
+                      primary: '#1C94D2',
+                      primary25: '#e1f4fb',
+                      primary50: '#b3e3f5',
+                      primary75: '#82d0ef',
+                    },
+                  })}
                 />
                 <span
                   className={

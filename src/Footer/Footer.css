@@ -19,7 +19,15 @@ ul.certifiedLogo img, .socialIcons ul li img {width: 85%; margin-bottom: 10px; f
 .footerLogoBx .flbHeading span:after {content: ""; width: 125px; height: 1px; background: #1c94d2; background: -moz-linear-gradient(left, #1c94d2 0%, #000000 100%); background: -webkit-linear-gradient(left, #1c94d2 0%,#000000 100%); background: linear-gradient(to right, #1c94d2 0%,#000000 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c94d2', endColorstr='#000000',GradientType=1 ); top: 9px; right: -105%; position: absolute; display: inline-block;}
 .footerLogoBx ul {padding: 0px; margin: 0px; text-align: center;}
 .footerLogoBx ul li {display: inline-block; padding: 5px 10px;}
-.footerLogoBx ul li img {max-width: 100%;}
+.footerLogoBx ul li img {max-width: 100%; width: 100%;}
+
+.footerLogoBx ul li.inc_logo img {max-width: 104px;}
+.footerLogoBx ul li.texas_logo img {max-width: 182px;}
+.footerLogoBx ul li.mbe_logo img {max-width: 95px;}
+.footerLogoBx ul li.small_business_logo img {max-width: 184px;}
+.footerLogoBx ul li.eq_logo img {max-width: 93px;}
+.footerLogoBx ul li.biz_logo img {max-width: 277px;}
+
 .footerCls {background: #203a70;}
 .copyTxt {display: flex; width: 100%; align-items: center; justify-content: space-between; text-transform: uppercase; font-size: 14px; color: #fff;}
 .copyTxt, .copyTxt {font-size: 14px; font-family: 'Open Sans', sans-serif; padding: 10px 0 !important; color: #5c5c5c !important; width: 100%; border-top: 1px solid #232323;}
@@ -29,3 +37,16 @@ ul.certifiedLogo img, .socialIcons ul li img {width: 85%; margin-bottom: 10px; f
 .copyTxt .fottercopy p a {color: #fff;}
 .copyTxt .orcor {color: #febf0f;}
 .fotterLogo {text-align: right; display: inline-block; float: right;}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .footerLogoBx ul li {width: calc(50% - 20px); display: inline-block;}
+    ul.certifiedLogo {display: block; text-align: left;}
+    ul.certifiedLogo li a {display: inline-block;}
+    ul.certifiedLogo li a img {max-width: 100%;}
+    .copyTxt {display: block; text-align: center;}
+    .fottercopy {display: block !important; text-decoration: uppercase; font-size: 16px; width: 100%; padding: 0 !important;}
+    .fottercopy p, .orcor, .fotterLogo a {font-size: 13px;}
+    .fotterLogo {text-align: center; display: block; float: none;}
+    .footerLogoBx .flbHeading span:before {width: 105px; left: -118px;}
+    .footerLogoBx .flbHeading span:after {width: 105px; right: -118px;}
+}

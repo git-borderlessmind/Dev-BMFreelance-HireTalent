@@ -34,7 +34,8 @@ export const BmSelect = ({ name, placeholder, onInputChange, isDirty, isDisabled
                 name={name}
                 options={options}
                 onInputChange={onInputChange}
-                disabled="disabled" />
+                disabled="disabled"
+            />
         </React.Fragment>
     } else{
         if (isDirty) {
