@@ -4,7 +4,7 @@ import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 import "./HireTeamPage.css";
 import { userActions } from "../_actions";
-import hiringstepbg from "../Stories/assets/hiring-step-bg.jpg";
+// simport hiringstepbg from "../Stories/assets/hiring-step-bg.jpg";
 import { Textarea } from "../Stories/Textarea/Textarea";
 import AutoSuggest from 'react-autosuggest';
 
@@ -141,7 +141,7 @@ export const HireTeamPage = ({ ...props }) => {
           <div className="hire_tal_con_wrapper">
             <div
               className="hire_lft_con"
-              style={{ backgroundImage: `url(${hiringstepbg})` }}
+              // style={{ backgroundImage: `url(${hiringstepbg})` }}
             >
               <div className="hire_lft_content">
                 <div className="hire_left_strip">

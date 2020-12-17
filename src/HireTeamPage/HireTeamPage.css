@@ -87,7 +87,8 @@
   padding: 100px 0;
 }
 #hire_talent_content .hire_tal_con_wrapper .hire_lft_con {
-  width: 40%; /*background: url(../images/hiring-step-bg.jpg) no-repeat center center;*/
+  width: 40%;
+  background: url(../Stories/assets/hiring-step-background.svg) no-repeat center center;
   background-size: cover;
   justify-content: flex-end;
 }

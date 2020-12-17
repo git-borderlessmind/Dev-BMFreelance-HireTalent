@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Footer.css";
-import inc5000logo from "../Stories/assets/inc-5000-logo.png";
-import texasexeslogo from "../Stories/assets/texas-exes-logo.png";
-import mbelogo from "../Stories/assets/mbe-logo.png";
-import smallbusinesseslogo from "../Stories/assets/10000-small-businesses-logo.png";
-import eqlogo from "../Stories/assets/eq-logo.png";
-import bizwnersedlogo from "../Stories/assets/biz-wnersed-logo.png";
-import inc5000logo1 from "../Stories/assets/inc5000_logo.png";
+// import inc5000logo from "../Stories/assets/inc-5000-logo.png";
+// import texasexeslogo from "../Stories/assets/texas-exes-logo.png";
+// import mbelogo from "../Stories/assets/mbe-logo.png";
+// import smallbusinesseslogo from "../Stories/assets/10000-small-businesses-logo.png";
+// import eqlogo from "../Stories/assets/eq-logo.png";
+// import bizwnersedlogo from "../Stories/assets/biz-wnersed-logo.png";
+import inc5000logo1 from "../Stories/assets/inc-logo.svg";
 
 export const Footer = ({ ...props }) => {
   return (
@@ -14,6 +14,7 @@ export const Footer = ({ ...props }) => {
       <footer>
         <div className="footercls">
           <div className="container-fluid">
+            <div className="new_wrapper">
             <div className="row">
               <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
                 <div className="addressbx">
@@ -134,22 +135,22 @@ export const Footer = ({ ...props }) => {
                       </div>
                       <ul>
                         <li>
-                          <img src={inc5000logo} alt="" />
+                          {/* <img src={inc5000logo} alt="" /> */}
                         </li>
                         <li>
-                          <img src={texasexeslogo} alt="" />
+                          {/* <img src={texasexeslogo} alt="" /> */}
                         </li>
                         <li>
-                          <img src={mbelogo} alt="" />
+                          {/* <img src={mbelogo} alt="" /> */}
                         </li>
                         <li>
-                          <img src={smallbusinesseslogo} alt="" />
+                          {/* <img src={smallbusinesseslogo} alt="" /> */}
                         </li>
                         <li>
-                          <img src={eqlogo} alt="" />
+                          {/* <img src={eqlogo} alt="" /> */}
                         </li>
                         <li>
-                          <img src={bizwnersedlogo} alt="" />
+                          {/* <img src={bizwnersedlogo} alt="" /> */}
                         </li>
                       </ul>
                     </div>
@@ -157,10 +158,12 @@ export const Footer = ({ ...props }) => {
                 </div>
               </div>
             </div>
+            </div>
           </div>
         </div>
         <div className="footerCls">
           <div className="container-fluid">
+            <div className="new_wrapper">
             <div className="row">
               <div className="col-lg-12 col-sm-12 col-xs-12">
                 <div className="copyTxt">
@@ -183,6 +186,7 @@ export const Footer = ({ ...props }) => {
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
