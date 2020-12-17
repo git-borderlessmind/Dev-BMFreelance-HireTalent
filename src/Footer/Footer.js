@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Footer.css";
-// import inc5000logo from "../Stories/assets/inc-5000-logo.png";
-// import texasexeslogo from "../Stories/assets/texas-exes-logo.png";
-// import mbelogo from "../Stories/assets/mbe-logo.png";
-// import smallbusinesseslogo from "../Stories/assets/10000-small-businesses-logo.png";
-// import eqlogo from "../Stories/assets/eq-logo.png";
-// import bizwnersedlogo from "../Stories/assets/biz-wnersed-logo.png";
+import inc5000logo from "../Stories/assets/inc-5000-logo.svg";
+import texasexeslogo from "../Stories/assets/texas-exes-logo.svg";
+import mbelogo from "../Stories/assets/mbe-logo.svg";
+import smallbusinesseslogo from "../Stories/assets/10000-small-businesses-logo.svg";
+import eqlogo from "../Stories/assets/eq-logo.svg";
+import bizwnersedlogo from "../Stories/assets/biz-wnersed-logo.svg";
 import inc5000logo1 from "../Stories/assets/inc-logo.svg";
 
 export const Footer = ({ ...props }) => {
@@ -134,23 +134,23 @@ export const Footer = ({ ...props }) => {
                         <span>Alumni from</span>
                       </div>
                       <ul>
-                        <li>
-                          {/* <img src={inc5000logo} alt="" /> */}
+                        <li className="inc_logo">
+                          <img src={inc5000logo} alt="" />
                         </li>
-                        <li>
-                          {/* <img src={texasexeslogo} alt="" /> */}
+                        <li className="texas_logo">
+                          <img src={texasexeslogo} alt="" />
                         </li>
-                        <li>
-                          {/* <img src={mbelogo} alt="" /> */}
+                        <li className="mbe_logo">
+                          <img src={mbelogo} alt="" />
                         </li>
-                        <li>
-                          {/* <img src={smallbusinesseslogo} alt="" /> */}
+                        <li className="small_business_logo">
+                          <img src={smallbusinesseslogo} alt="" />
                         </li>
-                        <li>
-                          {/* <img src={eqlogo} alt="" /> */}
+                        <li className="eq_logo">
+                          <img src={eqlogo} alt="" />
                         </li>
-                        <li>
-                          {/* <img src={bizwnersedlogo} alt="" /> */}
+                        <li className="biz_logo">
+                          <img src={bizwnersedlogo} alt="" />
                         </li>
                       </ul>
                     </div>
