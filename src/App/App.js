@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { history } from '../_helpers';
 import { alertActions } from '../_actions';
 import './app.css';
-import { HomePage } from '../HomePage';
 import { progressBarFetch, setOriginalFetch, ProgressBar } from 'react-fetch-progressbar';
+import { HireTeamPage } from '../HireTeamPage/HireTeamPage';
  
 // Let react-fetch-progressbar know what the original fetch is.
 setOriginalFetch(window.fetch);
@@ -36,7 +36,7 @@ function App() {
             }
             <Router history={history}>
                 <Switch>              
-                    <Route path="/" component={HomePage} />
+                    <Route path="/" component={HireTeamPage} />
                     <Redirect from="*" to="/" />
                 </Switch>
             </Router>

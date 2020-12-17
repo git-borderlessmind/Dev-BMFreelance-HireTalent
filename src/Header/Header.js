@@ -3,6 +3,16 @@ import "./Header.css";
 import logo from "../Stories/assets/logo.svg";
 
 export const Header = ({ ...props }) => {
+  const [showDialog, setDialogVisibility] = useState('hide_dialog');
+
+  function openDialogHireTeam(){
+    setDialogVisibility('show_dialog '+ new Date().getTime());
+  }
+  
+  function selectedJobType(selectedValue){
+    setSelectedJobType(selectedValue);
+  }
+
   return (
     <React.Fragment>
       <header id="freelancers">
@@ -11,7 +21,7 @@ export const Header = ({ ...props }) => {
           <div className="row">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <nav className="navbar navbar-expand-lg navbar-light">
-                <a className="navbar-brand" href="javascript:void(0);">
+                <a className="navbar-brand" href="https://www.borderlessmind.com/">
                   <img src={logo} alt="" />
                 </a>
                 <button
@@ -27,8 +37,15 @@ export const Header = ({ ...props }) => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                   <ul className="navbar-nav">
-                    <li className="nav-item search_icon">
-                      <label>Hire Your Team</label>
+                    <li className="nav-item">
+                      {/* <label className="cursor-pointer" onClick={openDialogHireTeam}>Hire Your Team</label> */}
+                      <a
+                        className="nav-link"
+                        aria-current="page"
+                        href="/"
+                      >
+                        Hire Your Team
+                      </a>
                     </li>
                     <li className="nav-item">
                       <a

@@ -5,6 +5,7 @@ import { authHeader } from '../_helpers';
 export const userService = {
     getFeaturedFreelancers,
     getalljobtypes,
+    getalljobtypeswithskills,
     getJobTypeSkills,
     searchFreelancers
 };
@@ -65,6 +66,16 @@ function getalljobtypes() {
     };
 
     return fetch(`${config.apiUrl}/api/bm/getalljobtypes`, requestOptions).then(handleResponse);
+}
+
+function getalljobtypeswithskills() {
+    const requestOptions = {
+        crossDomain:true,
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+    };
+
+    return fetch(`${config.apiUrl}/api/bm/getalljobtypeswithskills`, requestOptions).then(handleResponse);
 }
 
 function getJobTypeSkills(jobtypeid) {

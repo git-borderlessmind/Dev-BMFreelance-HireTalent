@@ -7,6 +7,7 @@ import { history } from '../_helpers';
 export const userActions = {
     getFeaturedFreelancers,
     getalljobtypes,
+    getalljobtypeswithskills,
     getJobTypeSkills,
     searchFreelancers
 };
@@ -35,6 +36,26 @@ function getalljobtypes(callback) {
     return dispatch => {
         dispatch(request({}));
         userService.getalljobtypes()
+            .then(
+                data => { 
+                    dispatch(success(data));
+                    callback(data);
+                },
+                error => {
+                    dispatch(failure(error.toString()));
+                    callback(null);
+                }
+            );
+    };
+    function request(data) { return { type: userConstants.GENERAL_REQUEST, data } }
+    function success(data) { return { type: userConstants.GENERAL_SUCCESS, data } }
+    function failure(data) { return { type: userConstants.GENERAL_FAILURE, data } }
+}
+
+function getalljobtypeswithskills(callback) {
+    return dispatch => {
+        dispatch(request({}));
+        userService.getalljobtypeswithskills()
             .then(
                 data => { 
                     dispatch(success(data));

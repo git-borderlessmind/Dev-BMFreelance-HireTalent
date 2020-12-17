@@ -1,0 +1,822 @@
+.dialog {
+  /*max-width: 600px;*/
+  width: 95%;
+  min-height: 280px;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  margin: 2rem auto;
+}
+.dialog_header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+.dialog_content {
+  padding: 1rem;
+}
+.dialog_header {
+  display: flex;
+  padding: 0 1rem;
+  height: 56px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d6e4ec;
+}
+.dialog_header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+.close_btn {
+  cursor: pointer;
+}
+
+.dialog_footer {
+  display: flex;
+  padding: 0 1rem;
+  height: 56px;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid #d6e4ec;
+}
+
+.dialog_wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.show_dialog {
+  display: block;
+}
+
+.hide_dialog {
+  display: none;
+}
+
+#hire_talent_content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#hire_talent_content .close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+#hire_talent_content .hire_tal_con_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+#hire_talent_content .hire_tal_con_wrapper .hire_lft_con,
+#hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 100px 0;
+}
+#hire_talent_content .hire_tal_con_wrapper .hire_lft_con {
+  width: 40%; /*background: url(../images/hiring-step-bg.jpg) no-repeat center center;*/
+  background-size: cover;
+  justify-content: flex-end;
+}
+#hire_talent_content .hire_tal_con_wrapper .hire_lft_con .hire_lft_content {
+  max-width: 590px;
+  width: 100%;
+  height: 50px;
+}
+#hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
+  width: 60%;
+}
+#hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {
+  max-width: calc(1000px - 8.333333%);
+  width: 100%;
+  margin-left: 8.333333%;
+  height: 100%;
+  position: relative;
+  padding-right: 30px;
+}
+#hire_talent_content
+  .hire_tal_con_wrapper
+  .hire_rht_con
+  .inner_rht_content
+  .buttons_wrapper {
+  position: absolute;
+  right: 30px;
+  /*bottom: -70px;*/
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+#hire_talent_content
+  .hire_tal_con_wrapper
+  .hire_rht_con
+  .inner_rht_content
+  .buttons_wrapper
+  button {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  border: none;
+  margin: 0 10px;
+}
+#hire_talent_content
+  .hire_tal_con_wrapper
+  .hire_rht_con
+  .inner_rht_content
+  .buttons_wrapper
+  button.blue {
+  background: #1c94d2;
+  box-shadow: 0px 0px 1px rgba(117, 131, 142, 0.04),
+    0px 2px 4px rgba(52, 60, 68, 0.16);
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #fbfbfb;
+}
+#hire_talent_content
+  .hire_tal_con_wrapper
+  .hire_rht_con
+  .inner_rht_content
+  .buttons_wrapper
+  button.white {
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #343c44;
+  background: none;
+}
+.hire_left_strip {
+  background: #2fb390;
+  border-radius: 4px 0px 0px 4px;
+  padding: 15px 50px 15px 15px;
+}
+#hire_talent_content
+  .hire_tal_con_wrapper
+  .hire_rht_con
+  .inner_rht_content
+  .buttons_wrapper
+  button.white.left {
+  position: absolute;
+  left: 0;
+}
+#hire_talent_content
+  .hire_tal_con_wrapper
+  .hire_rht_con
+  .inner_rht_content
+  .buttons_wrapper
+  button:last-child {
+  margin-right: 0;
+}
+.hire_left_strip h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #fbfbfb;
+  margin: 0;
+  padding: 0 0 6px 0;
+}
+.hire_left_strip p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  color: #fbfbfb;
+  margin: 0;
+  padding: 0;
+}
+#hire_talent_content
+  .hire_tal_con_wrapper
+  .hire_rht_con
+  .inner_rht_content
+  .rht_content_header {
+  margin: 0;
+  padding: 0;
+}
+#hire_talent_content
+  .hire_tal_con_wrapper
+  .hire_rht_con
+  .inner_rht_content
+  .rht_content_header
+  h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #343c44;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+.rht_content_header .step_nos {
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #343c44;
+}
+.rht_content_header .step_nos span {
+  font-weight: 700;
+}
+.step_pro_bar {
+  height: 4px;
+  background: #f2f2f2;
+  position: relative;
+  margin: 20px 0 0 0;
+}
+.step_pro_bar .step_pro_hightlight {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 4px;
+  background: #2fb390;
+}
+.step_pro_bar.step_one .step_pro_hightlight {
+  width: 16.66666667%;
+}
+.step_pro_bar.step_two .step_pro_hightlight {
+  width: 33.33333334%;
+}
+.step_pro_bar.step_three .step_pro_hightlight {
+  width: 50.00000001%;
+}
+.step_pro_bar.step_four .step_pro_hightlight {
+  width: 66.66666668%;
+}
+.step_pro_bar.step_five .step_pro_hightlight {
+  width: 83.333333335%;
+}
+.step_pro_bar.step_six .step_pro_hightlight {
+  width: 100%;
+}
+.inner_rht_content .steps_content ul.listing {
+  margin: 0;
+  padding: 30px 0 0 0;
+  list-style: none;
+  height: 100%;
+}
+.inner_rht_content .steps_content ul.listing li {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+.inner_rht_content .steps_content ul.listing li:last-child {
+  padding-bottom: 0;
+}
+.inner_rht_content .steps_content ul.listing li .radio,
+.inner_rht_content .steps_content ul.listing li .checkbox,
+.inner_rht_content .steps_content ul.listing li .content {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: calc(100% - 30px);
+}
+.inner_rht_content .steps_content {
+  max-height: calc(100% - 84px);
+  overflow-y: auto;
+  height: 100%;
+}
+.steps_content ul.listing li .content h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #343c44;
+  display: block;
+  width: 100%;
+}
+.steps_content ul.listing li .content div.skillstext {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #343c44;
+  display: block;
+  width: 100%;
+}
+.inner_rht_content .steps_content ul.listing li .radio,
+.inner_rht_content .steps_content ul.listing li .checkbox {
+  width: 30px;
+}
+
+/**** custom radio and checkbox ****/
+.radio,
+.checkbox {
+  position: relative;
+  margin: 19px 0 0 0;
+}
+.radio label:before,
+.checkbox label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 13px;
+  border: 1px solid #1c94d2;
+  background-color: #fff;
+}
+.radio label:before,
+.checkbox label:before {
+  border-radius: 100%;
+}
+.checkbox label:before {
+  border-radius: 3px;
+}
+.radio input[type="radio"]:checked + label:before {
+  content: "\2713";
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 19px;
+  font-weight: bold;
+  background: #1c94d2;
+}
+.checkbox input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 19px;
+  font-weight: bold;
+  background: #1c94d2;
+}
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  /*opacity: 0;*/
+}
+
+/**** custom scrollbar ****/
+.inner_rht_content .steps_content ul {
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+}
+.inner_rht_content .steps_content ul::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+}
+.inner_rht_content .steps_content ul::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+.inner_rht_content .steps_content ul::-webkit-scrollbar-thumb {
+  background: #525965;
+  border: 0px none #fff;
+  border-radius: 0px;
+}
+.inner_rht_content .steps_content ul::-webkit-scrollbar-thumb:hover {
+  background: #525965;
+}
+.inner_rht_content .steps_content ul::-webkit-scrollbar-thumb:active {
+  background: #525965;
+}
+.inner_rht_content .steps_content ul::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0px none #fff;
+  border-radius: 50px;
+}
+.inner_rht_content .steps_content ul::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+.inner_rht_content .steps_content ul::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+.inner_rht_content .steps_content ul::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+  #hire_talent_content .hire_tal_con_wrapper .hire_lft_con {
+    width: 100%;
+    max-height: 230px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .hire_left_strip {
+    border-radius: 4px;
+    margin: 0 15px;
+  }
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
+    width: 100%;
+    padding: 30px 0;
+    height: calc(100% - 340px);
+  }
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {
+    height: 100%;
+  }
+  #hire_talent_content .close {
+    top: 259px;
+  }
+  #hire_talent_content .close img {
+    max-width: 30px;
+  }
+  #hire_talent_content
+    .hire_tal_con_wrapper
+    .hire_rht_con
+    .inner_rht_content
+    .buttons_wrapper
+    button {
+    font-size: 15px !important;
+  }
+  .inner_rht_content .steps_content {
+    max-height: calc(100% - 112px);
+  }
+  #hire_talent_content
+    .hire_tal_con_wrapper
+    .hire_rht_con
+    .inner_rht_content
+    .rht_content_header
+    h2 {
+    font-size: 22px;
+  }
+  #freelancers_banner {
+    height: 500px;
+  }
+  #freelancers_banner h1 {
+    padding: 0 0 15px 0;
+    line-height: 31px;
+  }
+  .search_container {
+    padding: 60px 0 20px 0;
+  }
+  #free_inner_content {
+    background: #f9f9f9;
+  }
+  #free_inner_content .candidate_listing ul li {
+    width: calc(50% - 30px);
+  }
+  #free_inner_content .candidate_listing ul li .content h4 {
+    font-size: 15px;
+  }
+  #free_inner_content .candidate_listing ul li .content p {
+    font-size: 11px;
+  }
+  #free_inner_content .candidate_listing ul li .img img {
+    width: 100%;
+    max-width: auto;
+  }
+  .footerLogoBx ul li {
+    width: calc(50% - 20px);
+    display: inline-block;
+  }
+  ul.certifiedLogo {
+    display: block;
+    text-align: left;
+  }
+  ul.certifiedLogo li a {
+    display: inline-block;
+  }
+  ul.certifiedLogo li a img {
+    max-width: 100%;
+  }
+  .copyTxt {
+    display: block;
+    text-align: center;
+  }
+  .fottercopy {
+    display: block !important;
+    text-decoration: uppercase;
+    font-size: 16px;
+    width: 100%;
+    padding: 0 !important;
+  }
+  .fottercopy p,
+  .orcor,
+  .fotterLogo a {
+    font-size: 13px;
+  }
+  .fotterLogo {
+    text-align: center;
+    display: block;
+    float: none;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  #hire_talent_content .hire_tal_con_wrapper .hire_lft_con {
+    width: 100%;
+    max-height: 300px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .hire_left_strip {
+    border-radius: 4px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
+    width: 100%;
+    padding: 0;
+    height: calc(100% - 390px);
+  }
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {
+    height: calc(100% - 70px);
+  }
+  #hire_talent_content .close {
+    top: 330px;
+  }
+  #hire_talent_content .close img {
+    max-width: 30px;
+  }
+  #freelancers_banner h1 {
+    font-size: 23px;
+  }
+  #freelancers_banner p {
+    font-size: 15px;
+  }
+  #free_inner_content .candidate_listing ul li {
+    width: calc(100% - 30px);
+  }
+  #free_inner_content .candidate_listing ul li .img img {
+    width: 100%;
+    max-width: auto;
+  }
+  .footerLogoBx ul li {
+    width: calc(50% - 20px);
+  }
+  .copyTxt {
+    display: block;
+    text-align: center;
+  }
+  .fottercopy {
+    display: block !important;
+    padding-bottom: 10px;
+    text-decoration: uppercase;
+    font-size: 16px;
+    width: 100%;
+    padding: 0 !important;
+  }
+  .fotterLogo {
+    text-align: center;
+    display: block;
+    float: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hire_left_strip {
+    margin-left: 15px;
+  }
+  #hire_talent_content .close img {
+    max-width: 40px;
+  }
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
+    padding: 60px 0 90px 0;
+  }
+  #free_inner_content .candidate_listing ul li {
+    width: calc(50% - 30px);
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hire_left_strip {
+    margin-left: 15px;
+  }
+  #free_inner_content .candidate_listing ul li {
+    width: calc(33.333334% - 30px);
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .hire_left_strip {
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .hire_left_strip {
+    margin-left: 15px;
+  }
+}
+
+.steps_content .textarea {
+  margin: 30px 0 0 0;
+  padding: 0;
+}
+.steps_content .textarea textarea {
+  background: #fbfbfb;
+  border: 1px solid #d6e4ec;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #343c44;
+  padding: 10px 15px;
+  width: 100%;
+  resize: none;
+  height: 100px;
+}
+.steps_content .textarea textarea:focus {
+  outline: none;
+}
+.steps_content .textarea label {
+  display: block;
+  text-align: right;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  line-height: 14px;
+  color: #343c44;
+}
+.popular_skills {
+  margin: 0;
+  padding: 25px 0 0 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.popular_skills label {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #343c44;
+  padding: 0 15px 0 0;
+  margin: 0;
+}
+.popular_skills select {
+  background: #fbfbfb;
+  border: 1px solid #d6e4ec;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #343c44;
+  padding: 10px 15px;
+  width: 210px;
+}
+.steps_content ul.chips_listing {
+  padding: 30px 0 0 0;
+}
+.steps_content ul.chips_listing li {
+  background: #fbfbfb;
+  border: 1px solid #1c94d2;
+  border-radius: 16px;
+  padding: 6px 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #343c44;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 10px 10px 0;
+}
+.steps_content ul.chips_listing li:hover,
+.steps_content ul.chips_listing li.selected {
+  background: #1c94d2;
+  color: #fff;
+}
+.step_form {
+  padding: 30px 0;
+}
+.step_form input[type="text"],
+.step_form input[type="email"] {
+  background: #fbfbfb;
+  border: 1px solid #d6e4ec;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #343c44;
+  max-width: 470px;
+  width: 100%;
+  padding: 10px 15px 10px 50px;
+}
+.step_form span.email_field,
+.step_form span.company_field,
+.step_form span.contact_field {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+}
+.step_form span.email_field img,
+.step_form span.company_field img,
+.step_form span.contact_field img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.step_form .checkbox {
+  max-width: 470px;
+  width: 100%;
+}
+.step_form .checkbox label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 14px;
+  color: #343c44;
+  padding-left: 35px;
+}
+
+.react-autosuggest__container {
+  position: relative;
+}
+
+.react-autosuggest__input {
+  width: 430px;
+  height: 40px;
+  padding: 10px 20px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.react-autosuggest__input--focused {
+  outline: none;
+}
+
+.react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  top: 51px;
+  width: 280px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: #ddd;
+}
+.click_icon {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.click_icon img {
+  cursor: pointer;
+}
+
+.react-autosuggest__container {
+  width: 100%;
+}
+.react-autosuggest__input {
+  width: 100%;
+  max-width: 100%;
+}
