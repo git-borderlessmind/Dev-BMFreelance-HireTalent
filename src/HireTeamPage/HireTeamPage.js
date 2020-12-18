@@ -921,7 +921,8 @@ export const HireTeamPage = ({ ...props }) => {
                   displaystep == "7" ? "inner_rht_content" : "hide_dialog"
                 }
               >
-                <div className="bm-alert alert-success">
+                <div className="bm-alert alert-success step_sucess_msg">
+                  <h2>Great!</h2>
                   <p>{successmessage}</p>
                 </div>
               </div>
