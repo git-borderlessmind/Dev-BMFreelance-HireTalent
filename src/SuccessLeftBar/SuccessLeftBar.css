@@ -81,6 +81,20 @@
   padding: 10px 0 0 0;
 }
 
+
+
+.success_rgt_wrapper {display: flex; align-items: center;}
+.success_con_wrapper {display: flex; align-items: center; flex-wrap: wrap; justify-content: center;}
+.success_con_wrapper .success_msg_logo {width: 100%; display: flex; align-items: center; justify-content: center; padding-bottom: 80px;}
+.success_con_wrapper .success_content {width: 100%; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; padding: 40px 0 0 0;}
+.success_con_wrapper .success_content .success_logo {width: 100%; display: flex; align-items: center; flex-wrap: wrap; justify-content: center;}
+.success_con_wrapper .success_content h1 {width: 100%; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; margin: 0; padding: 0 0 20px 0; font-weight: 300; font-size: 60px; color: #343C44;}
+.success_con_wrapper .success_content p {width: 100%; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; font-weight: normal; font-size: 24px; color: #343C44; text-align: center;}
+.success_con_wrapper .success_content button.success_cta_btn {background: #1C94D2; box-shadow: 0px 0px 1px rgba(117, 131, 142, 0.04), 0px 2px 4px rgba(52, 60, 68, 0.16); border-radius: 4px; padding: 10px 20px; border: none; font-weight: normal; font-size: 16px; line-height: 28px; color: #FBFBFB;}
+.success_con_wrapper .success_content ul {width: 100%; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; margin: 0; padding: 70px 0 0 0; list-style: none;}
+.success_con_wrapper .success_content ul li {display: inline-flex; align-items: center; flex-wrap: wrap; padding-right: 20px;}
+.success_con_wrapper .success_content ul li:last-child {padding-right: 0;}
+
 @media only screen and (min-width: 0px) and (max-width: 575px) {
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
     padding: 50px 0 0 0;
@@ -103,6 +117,15 @@
     top: 15px;
     right: 15px;
   }
+
+
+  .hire_lft_con.step5_bg {display: none !important;}
+  .hire_rht_con.step_success_content {height: 100% !important;}
+  .success_con_wrapper .success_msg_logo {padding-bottom: 0;}
+  .success_con_wrapper .success_content .success_logo img {max-width: 60px;}
+  .success_con_wrapper .success_content h1 {font-size: 45px;}
+  .success_con_wrapper .success_content p {font-size: 19px;}
+  .success_con_wrapper .success_content ul {display: none;}
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -127,6 +150,10 @@
     top: 30px;
     right: 30px;
   }
+  .hire_lft_con.step5_bg {display: none !important;}
+  .hire_rht_con.step_success_content {height: 100% !important;}
+  .success_con_wrapper .success_msg_logo {padding-bottom: 0;}
+  .success_con_wrapper .success_content .success_logo img {max-width: 80px;}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -147,6 +174,12 @@
     right: 20px;
     top: 20px;
   }
+
+  .hire_lft_con.step5_bg {display: none !important;}
+  .hire_rht_con.step_success_content {height: 100% !important;}
+  .success_con_wrapper .success_msg_logo {padding-bottom: 0;}
+  .success_con_wrapper .success_content .success_logo img {max-width: 80px;}
+  .hire_rht_con.step_success_content {width: 100% !important;}
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -163,6 +196,8 @@
     padding-right: 8.333333%;
     max-width: calc(100% - 8.333333%);
   }
+
+  .success_con_wrapper .success_msg_logo {padding-bottom: 0;}
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
