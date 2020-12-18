@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../Stories/button/Button";
 import { Input } from "../Stories/input/Input";
 import * as EmailValidator from "email-validator";
+import { SuccessLeftBar } from "../SuccessLeftBar/SuccessLeftBar";
 
 export const HireTeamPage = ({ ...props }) => {
   const [allowedcharlength, setAllowedCharLength] = useState(1000);
@@ -299,7 +300,12 @@ export const HireTeamPage = ({ ...props }) => {
                 </div>
               </div>
             </div> */}
-            <HowItWorksLeftBar />
+            { displaystep != "7" &&
+              <HowItWorksLeftBar />
+            }
+            { displaystep == "7" &&
+              <SuccessLeftBar />
+            }
             <div className="hire_rht_con">
               <div
                 className={
