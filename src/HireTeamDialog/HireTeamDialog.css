@@ -369,7 +369,7 @@
 }
 .radio input[type="radio"],
 .checkbox input[type="checkbox"] {
-  /*opacity: 0;*/
+  opacity: 0 !important;
 }
 
 /**** custom scrollbar ****/

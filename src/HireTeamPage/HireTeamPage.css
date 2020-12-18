@@ -89,7 +89,7 @@
 #hire_talent_content .hire_tal_con_wrapper .hire_lft_con {
   width: 40%;
   background: url(../Stories/assets/hiring-step-background.svg) no-repeat center center;
-  background-size: cover;
+  background-size: cover !important;
   justify-content: flex-end;
 }
 #hire_talent_content .hire_tal_con_wrapper .hire_lft_con .hire_lft_content {
@@ -369,7 +369,7 @@
 }
 .radio input[type="radio"],
 .checkbox input[type="checkbox"] {
-  /*opacity: 0;*/
+  opacity: 0 !important;
 }
 
 /**** custom scrollbar ****/
@@ -411,6 +411,9 @@
   background: transparent;
 }
 
+.bm-alert.alert-success.step_sucess_msg {flex-wrap: wrap; background-position: 5px 8px; padding-left: 40px;}
+.bm-alert.alert-success.step_sucess_msg h2 {font-weight: normal; font-size: 16px; line-height: 16px; color: #FBFBFB; margin: 0; padding: 0 0 6px 0; width: 100%;}
+
 @media only screen and (min-width: 0px) and (max-width: 575px) {
   #hire_talent_content .hire_tal_con_wrapper .hire_lft_con {
     width: 100%;
@@ -426,7 +429,7 @@
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
     width: 100%;
     padding: 30px 0;
-    height: calc(100% - 340px);
+    height: 100%;
   }
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {
     height: 100%;
@@ -446,7 +449,8 @@
     font-size: 15px !important;
   }
   .inner_rht_content .steps_content {
-    max-height: calc(100% - 112px);
+    max-height: calc(100% - 202px);
+    margin: 30px 0;
   }
   #hire_talent_content
     .hire_tal_con_wrapper
@@ -517,6 +521,9 @@
     display: block;
     float: none;
   }
+
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .buttons_wrapper {bottom: 0;}
+  .inner_rht_content .steps_content ul.listing {padding: 5px 0;}
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -534,11 +541,11 @@
   }
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
     width: 100%;
-    padding: 0;
-    height: calc(100% - 390px);
+    padding: 30px 0;
+    /* height: calc(100% - 390px); */
   }
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {
-    height: calc(100% - 70px);
+    /* height: calc(100% - 70px); */
   }
   #hire_talent_content .close {
     top: 330px;
@@ -579,6 +586,10 @@
     display: block;
     float: none;
   }
+
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .buttons_wrapper {bottom: 0;}
+  .inner_rht_content .steps_content ul.listing {padding: 5px 0;}
+  .inner_rht_content .steps_content {max-height: calc(100% - 142px); padding: 30px 0;}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -589,11 +600,16 @@
     max-width: 40px;
   }
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
-    padding: 60px 0 90px 0;
+    padding: 60px 0; width: 100%;
   }
   #free_inner_content .candidate_listing ul li {
     width: calc(50% - 30px);
   }
+
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {margin: 0 auto !important; max-width: 80%;}
+  .inner_rht_content .steps_content {margin: 30px 0; max-height: calc(100% - 203px);}
+  .inner_rht_content .steps_content ul.listing {padding: 5px 0;}
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .buttons_wrapper {bottom: 0;}
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -603,18 +619,53 @@
   #free_inner_content .candidate_listing ul li {
     width: calc(33.333334% - 30px);
   }
+
+  #hire_talent_content .hire_tal_con_wrapper .hire_lft_con, #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {padding: 50px 0;}
+  .step5_bg ul li span.icon img {max-width: 60px;}
+  .step5_bg h1 {font-size: 25px; line-height: 35px;}
+  .step5_bg p {font-size: 20px;}
+  .step5_bg ul li:before {height: 21px;}
+  .step5_bg ul li {padding-top: 26px;}
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .buttons_wrapper {bottom: 0; right: 8.33333334%;;}
+  .inner_rht_content .steps_content {margin: 30px 0; max-height: calc(100% - 202px);}
+  .inner_rht_content .steps_content ul.listing {padding: 5px 0;}
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {padding-right: 8.333333%;}
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .hire_left_strip {
     margin-left: 15px;
   }
+  .step5_bg p {font-size: 18px; line-height: 23px;}
+  .step5_bg ul li span.icon img {max-width: 65px;}
+  .step5_bg h1 {margin: 0 0 10px 0; padding: 0 0 5px 0; font-size: 28px; line-height: 39px;}
+  .step5_bg ul li {padding-top: 32px;}
+  .step5_bg ul li:before {height: 27px;}
+  #hire_talent_content .hire_tal_con_wrapper .hire_lft_con, #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {padding: 60px 0;}
+  .step5_bg ul li p {padding: 5px 0 0 0; line-height: 18px;}
+
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {padding-right: 8.333333%;}
+
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .rht_content_header h2 {padding: 0 0 10px 0;}
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .buttons_wrapper {right: 8.333333%; bottom: 0;}
+  .inner_rht_content .steps_content {margin: 30px 0; max-height: calc(100% - 192px);}
+  .inner_rht_content .steps_content ul.listing {padding: 5px 0;}
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
   .hire_left_strip {
     margin-left: 15px;
   }
+
+  .step5_bg ul li {padding-top: 0;}
+  .step5_bg ul li:before {display: none;}
+
+  #hire_talent_content .hire_tal_con_wrapper .hire_lft_con, #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {padding: 60px 0;}
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .rht_content_header h2 {padding: 0;}
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .buttons_wrapper {right: 8.333334%; bottom: 0;}
+  .inner_rht_content .steps_content {margin: 30px 0; max-height: calc(100% - 182px);}
+  .inner_rht_content .steps_content ul.listing {padding: 5px 0;}
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {padding-right: 8.333334%;}
 }
 
 .steps_content .textarea {
