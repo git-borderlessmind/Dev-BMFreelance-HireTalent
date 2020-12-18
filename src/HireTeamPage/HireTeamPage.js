@@ -929,7 +929,7 @@ export const HireTeamPage = ({ ...props }) => {
                 </div>
               </div>
 
-              <div
+              {/* <div
                 className={
                   displaystep == "7" ? "inner_rht_content" : "hide_dialog"
                 }
@@ -938,7 +938,7 @@ export const HireTeamPage = ({ ...props }) => {
                   <h2>Great!</h2>
                   <p>{successmessage}</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
