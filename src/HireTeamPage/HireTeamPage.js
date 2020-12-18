@@ -300,12 +300,14 @@ export const HireTeamPage = ({ ...props }) => {
                 </div>
               </div>
             </div> */}
-            { displaystep != "7" &&
-              <HowItWorksLeftBar />
-            }
+            
             { displaystep == "7" &&
               <SuccessLeftBar />
             }
+            { displaystep != "7" &&
+              <HowItWorksLeftBar />
+            }
+            { displaystep != "7" &&
             <div className="hire_rht_con">
               <div
                 className={
@@ -928,18 +930,8 @@ export const HireTeamPage = ({ ...props }) => {
                   />
                 </div>
               </div>
-
-              {/* <div
-                className={
-                  displaystep == "7" ? "inner_rht_content" : "hide_dialog"
-                }
-              >
-                <div className="bm-alert alert-success step_sucess_msg">
-                  <h2>Great!</h2>
-                  <p>{successmessage}</p>
-                </div>
-              </div> */}
             </div>
+            }
           </div>
         </section>
         {/* <Footer /> */}
