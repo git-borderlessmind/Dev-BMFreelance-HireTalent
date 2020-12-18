@@ -80,6 +80,13 @@ export const HireTeamPage = ({ ...props }) => {
       })
     );
   }
+
+  function decodeHtml(html) {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+  }
+
   function fetchSkills(jobtypeid) {
     dispatch(
       userActions.getJobTypeSkills(jobtypeid, (dataskills) => {
@@ -106,7 +113,7 @@ export const HireTeamPage = ({ ...props }) => {
           let lowerCasedSkills = allskillsarray.map((skl) => {
             return {
               id: skl.value,
-              name: skl.label.toLowerCase(),
+              name: decodeHtml(skl.label.toLowerCase()),
             };
           });
           setLowerCasedSkills(lowerCasedSkills);
