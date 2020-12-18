@@ -8,7 +8,6 @@ import smallbusinesseslogo from "../Stories/assets/success-small-bus-logo.svg";
 import eqlogo from "../Stories/assets/success-eq-logo.svg";
 import bizwnersedlogo from "../Stories/assets/success-biz-logo.svg";
 import inc5000logo from "../Stories/assets/success-eq-logo.svg";
-
 export const SuccessLeftBar = ({ ...props }) => {
   
   return (
@@ -27,7 +26,10 @@ export const SuccessLeftBar = ({ ...props }) => {
                       <h1>Great!</h1>
                       <p>Thank you for showing your interest.<br />
                       We will get back to you soon!</p>
-                      <button className="success_cta_btn">Back to Homepage</button>
+                      <button className="success_cta_btn"    onClick={(e) => {
+      e.preventDefault();
+      window.location.href='https://www.borderlessmind.com/';
+      }}>Back to Homepage</button>
                       <ul className="success_bot_logos">
                           <li><img src={inc5000logo} alt="" /></li>
                           <li><img src={mbelogo} alt="" /></li>

@@ -4,6 +4,17 @@
   justify-content: center !important;
   align-content: center;
 }
+
+.hire_lft_con.success_lft_back {
+  background-image:  url(../Stories/assets/success_left.svg) !important;
+  background-color: #20536f !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: 100% 100% !important;
+  justify-content: center !important;
+  align-content: center;
+}
+
 .step5_bg h1 {
   margin: 0 0 10px 0;
   padding: 0 0 10px 0;
@@ -94,6 +105,8 @@
 .success_con_wrapper .success_content ul {width: 100%; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; margin: 0; padding: 70px 0 0 0; list-style: none;}
 .success_con_wrapper .success_content ul li {display: inline-flex; align-items: center; flex-wrap: wrap; padding-right: 20px;}
 .success_con_wrapper .success_content ul li:last-child {padding-right: 0;}
+
+.success_con_wrapper .success_content button.success_cta_btn:focus{outline: 0;}
 
 @media only screen and (min-width: 0px) and (max-width: 575px) {
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {

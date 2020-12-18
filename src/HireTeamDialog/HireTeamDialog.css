@@ -151,6 +151,16 @@
   line-height: 28px;
   color: #fbfbfb;
 }
+
+
+#hire_talent_content
+.hire_tal_con_wrapper
+.hire_rht_con
+.inner_rht_content
+.buttons_wrapper button.blue:focus{
+    outline: 0;
+}
+
 #hire_talent_content
   .hire_tal_con_wrapper
   .hire_rht_con
