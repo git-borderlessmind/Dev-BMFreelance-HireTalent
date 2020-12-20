@@ -476,7 +476,7 @@ export const HireTeamPage = ({ ...props }) => {
                 }
               >
                 <div className="rht_content_header">
-                  <h2>How long do you need the developer?</h2>
+                  <h2>How long do you need the resource?</h2>
                   <div className="step_nos">
                     Step <span>3</span> of <span>6</span>
                   </div>
