@@ -31,7 +31,7 @@ export const HireTeamPage = ({ ...props }) => {
   const [durationofproject, setSelectedDurationOfProject] = useState(
     "Less than 1 week"
   );
-  const [numberofresources, setSelectedNumberOfResources] = useState("Only 1");
+  const [numberofresources, setSelectedNumberOfResources] = useState("Only One");
   const [desired_areas_of_expertise, setDesiredAreasOfExpertise] = useState("");
   const [displaystep, setDisplayStep] = useState("1");
   const [email, setEmail] = useState("");
@@ -634,14 +634,14 @@ export const HireTeamPage = ({ ...props }) => {
                           id="only_1"
                           type="radio"
                           name="numberofresources"
-                          value="Only 1"
-                          checked={numberofresources == "Only 1" ? true : false}
+                          value="Only One"
+                          checked={numberofresources == "Only One" ? true : false}
                           onChange={handleChangeNumberOfResources}
                         />
                         <label htmlFor="only_1"></label>
                       </div>
                       <div className="content">
-                        <p>Only 1</p>
+                        <p>Only One</p>
                       </div>
                     </li>
                     <li>
