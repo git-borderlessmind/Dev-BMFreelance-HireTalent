@@ -169,6 +169,18 @@ export const HireTeamPage = ({ ...props }) => {
         value: s.value,
         label: s.label,
       });
+
+      const newsuggestedskillsarray = [];
+      skills.forEach((element) => {
+        if (element.value != s.value) {
+          newsuggestedskillsarray.push({
+            value: element.value,
+            label: element.label,
+          });
+        }
+      });
+      setSkills(newsuggestedskillsarray);
+
     }
     setSelectedSkills(newselectedskillsarray);
   }
@@ -183,6 +195,19 @@ export const HireTeamPage = ({ ...props }) => {
       }
     });
     setSelectedSkills(newselectedskillsarray);
+
+    const newsuggestedskillsarray = [];
+    skills.forEach((element) => {
+      newsuggestedskillsarray.push({
+        value: element.value,
+        label: element.label,
+      });
+    });
+    newsuggestedskillsarray.push({
+      value: s.value,
+      label: s.label,
+    });
+    setSkills(newsuggestedskillsarray);
   }
 
   function handleChangeEmail(e) {
