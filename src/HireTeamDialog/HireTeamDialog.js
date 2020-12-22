@@ -199,7 +199,7 @@ export const HireTeamDialog = ({ visibility, ...props }) => {
                             }
                             onChange={handleChangeTypeOfProject}
                           />
-                          <label htmlFor="cloud"></label>
+                          <label htmlFor="existing_project"></label>
                         </div>
                         <div className="content">
                           <p>Existing project that needs more resources</p>

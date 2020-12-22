@@ -408,7 +408,7 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeTypeOfProject}
                         />
-                        <label htmlFor="cloud"></label>
+                        <label htmlFor="existing_project"></label>
                       </div>
                       <div className="content">
                         <p>Existing project that needs more resources</p>
@@ -732,7 +732,7 @@ export const HireTeamPage = ({ ...props }) => {
                 <div className="step_pro_bar step_five">
                   <div className="step_pro_hightlight"></div>
                 </div>
-                <div className="steps_content">
+                <div className="steps_content step_fice_content">
                   <div className="textarea">
                     <Textarea
                       maxlength={allowedcharlength}
@@ -753,7 +753,7 @@ export const HireTeamPage = ({ ...props }) => {
                             removeSelectedSkills(e, selectedskill)
                           }
                         >
-                          x&nbsp; {renderHTML(selectedskill.label)}
+                          <span className="material-icons">cancel</span> {renderHTML(selectedskill.label)}
                         </li>
                       );
                     })}
@@ -835,7 +835,7 @@ export const HireTeamPage = ({ ...props }) => {
                 <div className="step_pro_bar step_six">
                   <div className="step_pro_hightlight"></div>
                 </div>
-                <div className="steps_content">
+                <div className="steps_content step_six_content">
                   <div className="step_form">
                     <span className="email_field">
                       <Input
