@@ -13,7 +13,7 @@ import { Button } from "../Stories/button/Button";
 import { Input } from "../Stories/input/Input";
 import * as EmailValidator from "email-validator";
 import { SuccessLeftBar } from "../SuccessLeftBar/SuccessLeftBar";
-
+import {Logo} from '../Stories/logo/Logo';
 export const HireTeamPage = ({ ...props }) => {
   const [allowedcharlength, setAllowedCharLength] = useState(1000);
   const [charsleft, setCharsLeft] = useState(1000);
@@ -315,6 +315,7 @@ export const HireTeamPage = ({ ...props }) => {
                 }
               >
                 <div className="rht_content_header">
+                <Logo />
                   <h2>I am looking for...</h2>
                   <div className="step_nos">
                     Step <span>1</span> of <span>6</span>

@@ -1,3 +1,7 @@
+.logo{
+  margin: 0 0 30px 0;
+}
+
 .dialog {
   /*max-width: 600px;*/
   width: 95%;
@@ -84,7 +88,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   height: 100%;
-  padding: 100px 0;
+  padding: 60px 0;
 }
 #hire_talent_content .hire_tal_con_wrapper .hire_lft_con {
   width: 40%;
@@ -104,7 +108,7 @@
   max-width: calc(1000px - 8.333333%);
   width: 100%;
   margin-left: 8.333333%;
-  height: 100%;
+  /* height: 100%; */
   position: relative;
   padding-right: 30px;
 }
@@ -600,7 +604,7 @@
     max-width: 40px;
   }
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
-    padding: 60px 0; width: 100%;
+    padding: 40px 0; width: 100%;
   }
   #free_inner_content .candidate_listing ul li {
     width: calc(50% - 30px);
@@ -641,7 +645,7 @@
   .step5_bg h1 {margin: 0 0 10px 0; padding: 0 0 5px 0; font-size: 28px; line-height: 39px;}
   .step5_bg ul li {padding-top: 32px;}
   .step5_bg ul li:before {height: 27px;}
-  #hire_talent_content .hire_tal_con_wrapper .hire_lft_con, #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {padding: 60px 0;}
+  #hire_talent_content .hire_tal_con_wrapper .hire_lft_con, #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {padding: 50px 0;}
   .step5_bg ul li p {padding: 5px 0 0 0; line-height: 18px;}
 
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {padding-right: 8.333333%;}
@@ -898,4 +902,11 @@
 .react-autosuggest__suggestion--highlighted span {
   background: #1c94d2;
   color: #fff !important;
+}
+
+
+.inner_rht_content .steps_content ul.listing{margin: 0 0 30px;}
+
+@media(min-width:1199px){
+  .hire_rht_con{height: 100vh !important;}
 }
