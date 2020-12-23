@@ -271,7 +271,7 @@
 }
 .inner_rht_content .steps_content ul.listing {
   margin: 0;
-  padding: 30px 0 0 0;
+  padding: 5px 0;
   list-style: none;
   height: 100%;
 }
@@ -296,9 +296,10 @@
   width: calc(100% - 30px);
 }
 .inner_rht_content .steps_content {
-  max-height: calc(100% - 84px);
+  max-height: calc(100% - 260px);
   overflow-y: auto;
   height: 100%;
+  margin: 30px 0;
 }
 .steps_content ul.listing li .content h6 {
   font-family: "Montserrat", sans-serif;
@@ -415,6 +416,10 @@
 .bm-alert.alert-success.step_sucess_msg h2 {font-weight: normal; font-size: 16px; line-height: 16px; color: #FBFBFB; margin: 0; padding: 0 0 6px 0; width: 100%;}
 .steps_content ul.listing li .content p {margin-bottom: 0;}
 .steps_content.step_fice_content .textarea {margin-top: 0;}
+
+.steps_content.step_fice_content {margin: 30px 0 0 0;}
+
+.right_logo {padding-bottom: 30px;}
 
 @media only screen and (min-width: 0px) and (max-width: 575px) {
   #hire_talent_content .hire_tal_con_wrapper .hire_lft_con {
@@ -643,24 +648,27 @@
   .step5_bg h1 {font-size: 25px; line-height: 35px;}
   .step5_bg p {font-size: 20px;}
   .step5_bg ul li:before {height: 21px;}
-  .step5_bg ul li {padding-top: 15px;}
+  .step5_bg ul li {padding-top: 15px; padding-bottom: 5px !important;}
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .buttons_wrapper {bottom: 0; right: 8.33333334%;;}
-  .inner_rht_content .steps_content {margin: 30px 0; max-height: calc(100% - 202px);}
+  .inner_rht_content .steps_content {margin: 30px 0; max-height: calc(100% - 262px);}
   .inner_rht_content .steps_content ul.listing {padding: 5px 0;}
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {padding-right: 8.333333%;}
 
   .step5_bg ul li span.icon img {max-width: 60px !important;}
   .inner_rht_content .steps_content.step_fice_content {max-height: calc(100% - 232px); padding: 0; margin: 30px 0;}
+
+  .right_logo {padding-bottom: 20px;}
+  .right_logo img {max-width: 250px;}
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .hire_left_strip {
     margin-left: 15px;
   }
-  .step5_bg p {font-size: 18px; line-height: 23px;}
-  .step5_bg ul li span.icon img {max-width: 65px !important;}
-  .step5_bg h1 {margin: 0 0 10px 0; padding: 0 0 5px 0; font-size: 28px; line-height: 39px;}
-  .step5_bg ul li {padding-top: 15px;}
+  .step5_bg p {font-size: 18px !important; line-height: 23px !important;}
+  .step5_bg ul li span.icon img {max-width: 55px !important;}
+  .step5_bg h1 {margin: 0 0 10px 0; padding: 0 0 5px 0; font-size: 28px !important; line-height: 28px !important;}
+  .step5_bg ul li {padding-top: 15px; padding-bottom: 15px !important;}
   .step5_bg ul li:before {height: 27px;}
   #hire_talent_content .hire_tal_con_wrapper .hire_lft_con, #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {padding: 60px 0;}
   .step5_bg ul li p {padding: 5px 0 0 0; line-height: 18px;}
@@ -669,10 +677,12 @@
 
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .rht_content_header h2 {padding: 0 0 10px 0;}
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .buttons_wrapper {right: 8.333333%; bottom: 0;}
-  .inner_rht_content .steps_content {margin: 30px 0; max-height: calc(100% - 192px);}
+  .inner_rht_content .steps_content {margin: 30px 0; max-height: calc(100% - 252px);}
   .inner_rht_content .steps_content ul.listing {padding: 5px 0;}
   .inner_rht_content .steps_content.step_fice_content {max-height: calc(100% - 222px); padding: 0; margin: 30px 0;}
 
+  .right_logo {padding-bottom: 20px;}
+  .right_logo img {max-width: 250px;}
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
@@ -686,9 +696,15 @@
   #hire_talent_content .hire_tal_con_wrapper .hire_lft_con, #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {padding: 60px 0;}
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .rht_content_header h2 {padding: 0;}
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .buttons_wrapper {right: 8.333334%; bottom: 0;}
-  .inner_rht_content .steps_content {margin: 30px 0; max-height: calc(100% - 182px);}
+  .inner_rht_content .steps_content {margin: 30px 0; max-height: calc(100% - 242px);}
   .inner_rht_content .steps_content ul.listing {padding: 5px 0;}
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {padding-right: 8.333334%;}
+
+  .right_logo {padding-bottom: 20px;}
+  .right_logo img {max-width: 250px;}
+
+  .step5_bg h1 {font-size: 30px !important; line-height: 30px !important;}
+  .step5_bg p {font-size: 18px !important; line-height: 23px !important;}
 }
 
 @media only screen and (min-width: 1600px) and (max-width: 4000px) {
