@@ -343,7 +343,7 @@ export const HireTeamPage = ({ ...props }) => {
               >
                 <div className="rht_content_header">
                   <div className="right_logo">
-                    <img src={rightlogo} alt="" />
+                    <a href="https://www.borderlessmind.com/"><img src={rightlogo} alt="" /></a>
                   </div>
                   <h2>I am looking for...</h2>
                   <div className="step_nos">
