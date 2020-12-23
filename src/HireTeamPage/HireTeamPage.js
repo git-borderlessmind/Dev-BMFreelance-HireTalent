@@ -394,7 +394,7 @@ export const HireTeamPage = ({ ...props }) => {
               >
                 <div className="rht_content_header">
                   <div className="right_logo">
-                    <img src={rightlogo} alt="" />
+                  <a href="https://www.borderlessmind.com/"><img src={rightlogo} alt="" /></a>
                   </div>
                   <h2>What type of project are you hiring for?</h2>
                   <div className="step_nos">
@@ -510,7 +510,7 @@ export const HireTeamPage = ({ ...props }) => {
               >
                 <div className="rht_content_header">
                   <div className="right_logo">
-                    <img src={rightlogo} alt="" />
+                  <a href="https://www.borderlessmind.com/"><img src={rightlogo} alt="" /></a>
                   </div>
                   <h2>How long do you need the resource?</h2>
                   <div className="step_nos">
@@ -655,7 +655,7 @@ export const HireTeamPage = ({ ...props }) => {
               >
                 <div className="rht_content_header">
                   <div className="right_logo">
-                    <img src={rightlogo} alt="" />
+                  <a href="https://www.borderlessmind.com/"><img src={rightlogo} alt="" /></a>
                   </div>
                   <h2>How many resources you need?</h2>
                   <div className="step_nos">
@@ -764,7 +764,7 @@ export const HireTeamPage = ({ ...props }) => {
               >
                 <div className="rht_content_header">
                   <div className="right_logo">
-                    <img src={rightlogo} alt="" />
+                  <a href="https://www.borderlessmind.com/"><img src={rightlogo} alt="" /></a>
                   </div>
                   <h2>What skills would you like to see in your new hire?</h2>
                   <div className="step_nos">
@@ -870,7 +870,7 @@ export const HireTeamPage = ({ ...props }) => {
 
                 <div className="rht_content_header">
                   <div className="right_logo">
-                    <img src={rightlogo} alt="" />
+                  <a href="https://www.borderlessmind.com/"><img src={rightlogo} alt="" /></a>
                   </div>
                   <h2>Successful! Let us connect you with the talent.</h2>
                   <div className="step_nos">

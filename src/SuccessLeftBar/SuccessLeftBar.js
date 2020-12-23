@@ -18,7 +18,8 @@ export const SuccessLeftBar = ({ ...props }) => {
       <div className="hire_rht_con step_success_content">
           <div className="inner_rht_content success_rgt_wrapper">
               <div className="success_con_wrapper">
-                  <div className="success_msg_logo"><img src={sucbmlogo} alt="" /></div>
+                  <div className="success_msg_logo"><a href="https://www.borderlessmind.com/"><img src={sucbmlogo} alt="" />
+                  </a></div>
                   <div className="success_content">
                       <div className="success_logo">
                           <img src={sucthankicon} alt="" />
