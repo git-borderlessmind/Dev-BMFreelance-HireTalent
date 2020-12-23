@@ -31,7 +31,7 @@ export const HireTeamPage = ({ ...props }) => {
   const [durationofproject, setSelectedDurationOfProject] = useState(
     "Less than 1 week"
   );
-  const [numberofresources, setSelectedNumberOfResources] = useState("Only 1");
+  const [numberofresources, setSelectedNumberOfResources] = useState("Only One");
   const [desired_areas_of_expertise, setDesiredAreasOfExpertise] = useState("");
   const [displaystep, setDisplayStep] = useState("1");
   const [email, setEmail] = useState("");
@@ -169,6 +169,18 @@ export const HireTeamPage = ({ ...props }) => {
         value: s.value,
         label: s.label,
       });
+
+      const newsuggestedskillsarray = [];
+      skills.forEach((element) => {
+        if (element.value != s.value) {
+          newsuggestedskillsarray.push({
+            value: element.value,
+            label: element.label,
+          });
+        }
+      });
+      setSkills(newsuggestedskillsarray);
+
     }
     setSelectedSkills(newselectedskillsarray);
   }
@@ -183,6 +195,19 @@ export const HireTeamPage = ({ ...props }) => {
       }
     });
     setSelectedSkills(newselectedskillsarray);
+
+    const newsuggestedskillsarray = [];
+    skills.forEach((element) => {
+      newsuggestedskillsarray.push({
+        value: element.value,
+        label: element.label,
+      });
+    });
+    newsuggestedskillsarray.push({
+      value: s.value,
+      label: s.label,
+    });
+    setSkills(newsuggestedskillsarray);
   }
 
   function handleChangeEmail(e) {
@@ -409,7 +434,7 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeTypeOfProject}
                         />
-                        <label htmlFor="cloud"></label>
+                        <label htmlFor="existing_project"></label>
                       </div>
                       <div className="content">
                         <p>Existing project that needs more resources</p>
@@ -477,7 +502,7 @@ export const HireTeamPage = ({ ...props }) => {
                 }
               >
                 <div className="rht_content_header">
-                  <h2>How long do you need the developer?</h2>
+                  <h2>How long do you need the resource?</h2>
                   <div className="step_nos">
                     Step <span>3</span> of <span>6</span>
                   </div>
@@ -635,14 +660,14 @@ export const HireTeamPage = ({ ...props }) => {
                           id="only_1"
                           type="radio"
                           name="numberofresources"
-                          value="Only 1"
-                          checked={numberofresources == "Only 1" ? true : false}
+                          value="Only One"
+                          checked={numberofresources == "Only One" ? true : false}
                           onChange={handleChangeNumberOfResources}
                         />
                         <label htmlFor="only_1"></label>
                       </div>
                       <div className="content">
-                        <p>Only 1</p>
+                        <p>Only One</p>
                       </div>
                     </li>
                     <li>
@@ -733,7 +758,7 @@ export const HireTeamPage = ({ ...props }) => {
                 <div className="step_pro_bar step_five">
                   <div className="step_pro_hightlight"></div>
                 </div>
-                <div className="steps_content">
+                <div className="steps_content step_fice_content">
                   <div className="textarea">
                     <Textarea
                       maxlength={allowedcharlength}
@@ -754,7 +779,7 @@ export const HireTeamPage = ({ ...props }) => {
                             removeSelectedSkills(e, selectedskill)
                           }
                         >
-                          x&nbsp; {renderHTML(selectedskill.label)}
+                          <span className="material-icons">cancel</span> {renderHTML(selectedskill.label)}
                         </li>
                       );
                     })}
@@ -836,7 +861,7 @@ export const HireTeamPage = ({ ...props }) => {
                 <div className="step_pro_bar step_six">
                   <div className="step_pro_hightlight"></div>
                 </div>
-                <div className="steps_content">
+                <div className="steps_content step_six_content">
                   <div className="step_form">
                     <span className="email_field">
                       <Input

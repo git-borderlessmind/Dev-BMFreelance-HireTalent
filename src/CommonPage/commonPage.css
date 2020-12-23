@@ -2,8 +2,44 @@
     margin: 0;
 }
 
+
+header.bm--onbarding-header{
+    background: #FFFFFF;
+    height: 100px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.onboarding-header--right{
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+.onboarding-header--message{
+    font-size: 1rem;
+    margin-right: 30px;
+}
+
+.commonpage_wrapper .bm-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 50px 0;
+}
+.bm-card {
+    padding: 50px;
+    background: #ffffff;
+    max-width: 460px;
+    width: 100%;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease 0s;
+}
 .common_page_header .progress_bar, .common_page_header .onboarding-header--right {display: none;}
 
 .commonpage_wrapper .bm-card {width: 100%; max-width: 100%; margin: 50px 0;}
-.commonpage_wrapper .bm-card .page_title h1 {font-family: "Montserrat", sans-serif; font-size: 24px; margin: 0 0 30px; font-weight: normal; position: relative;}
+.commonpage_wrapper .bm-card .page_title h1 {font-family: "Montserrat", sans-serif; font-size: 24px; margin: 0 0 30px; font-weight: normal; position: relative;
+color: #000;}
 .commonpage_wrapper .bm-card .page_title h1:before {content: ""; position: absolute; width: 6px; height: 40px; transform: translate(-50px, -5px); background-color: #343c44;}

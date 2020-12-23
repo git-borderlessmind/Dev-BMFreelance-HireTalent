@@ -107,11 +107,12 @@
 .success_con_wrapper .success_content ul li:last-child {padding-right: 0;}
 
 .success_con_wrapper .success_content button.success_cta_btn:focus{outline: 0;}
+.success_msg_logo img {max-width: 100%;}
 
 @media only screen and (min-width: 0px) and (max-width: 575px) {
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
-    padding: 50px 0 0 0;
-    height: calc(100% - 100px);
+    padding: 30px 0;
+    /* height: 100%; */
   }
   .hire_lft_con.step5_bg {
     display: none !important;
@@ -139,12 +140,14 @@
   .success_con_wrapper .success_content h1 {font-size: 45px;}
   .success_con_wrapper .success_content p {font-size: 19px;}
   .success_con_wrapper .success_content ul {display: none;}
+  .hire_lft_con.success_lft_back {display: none !important;}
+  .success_con_wrapper {padding: 30px 0;}
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {
-    padding: 100px 0 0 0;
-    height: calc(100% - 100px);
+    padding: 50px 0;
+    height: inherit !important;
   }
   .hire_lft_con.step5_bg {
     display: none !important;
@@ -167,6 +170,8 @@
   .hire_rht_con.step_success_content {height: 100% !important;}
   .success_con_wrapper .success_msg_logo {padding-bottom: 0;}
   .success_con_wrapper .success_content .success_logo img {max-width: 80px;}
+  .hire_lft_con.success_lft_back {display: none !important;}
+  .success_con_wrapper {padding: 30px 0;}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -193,6 +198,7 @@
   .success_con_wrapper .success_msg_logo {padding-bottom: 0;}
   .success_con_wrapper .success_content .success_logo img {max-width: 80px;}
   .hire_rht_con.step_success_content {width: 100% !important;}
+  .hire_lft_con.success_lft_back {display: none !important;}
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -213,8 +219,9 @@
   .success_con_wrapper .success_msg_logo {padding-bottom: 0;}
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-}
-
-@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+@media only screen and (min-width: 0px) and (max-width: 570px) and (orientation: landscape) {
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content {height: auto !important;}
+  .inner_rht_content .steps_content, .inner_rht_content .steps_content ul {overflow: visible !important; max-height: inherit;}
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con .inner_rht_content .buttons_wrapper {position: inherit;}
+  #hire_talent_content .hire_tal_con_wrapper .hire_rht_con {height: auto;}
 }
