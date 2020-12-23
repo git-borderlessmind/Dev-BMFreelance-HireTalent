@@ -94,3 +94,5 @@ span.ripple {
     opacity: 0;
   }
 }
+
+.bm-button span.spinner-border{margin-left: 0.5rem;}

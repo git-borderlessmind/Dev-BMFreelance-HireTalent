@@ -52,7 +52,7 @@
   color: #398bc8;
 }
 .step5_bg ul {
-  margin: 0;
+  margin: 40px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -62,8 +62,9 @@
   justify-content: center;
   position: relative;
   /* padding-top: 46px; */
-  padding-bottom: 10px;
+  padding-bottom: 60px;
 }
+.step5_bg ul li:last-child {padding-bottom: 0px !important;}
 .step5_bg ul li:before {
   content: "";
   background: url(../Stories/assets/step-five-li-sep.svg) no-repeat;
@@ -80,7 +81,7 @@
   text-align: center;
 }
 .step5_bg ul li span.icon img {
-  max-width: 100%;
+  max-width: 65px;
 }
 .step5_bg ul li p {
   font-family: "Montserrat", sans-serif;

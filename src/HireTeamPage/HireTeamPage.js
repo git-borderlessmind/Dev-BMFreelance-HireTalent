@@ -13,7 +13,9 @@ import { Button } from "../Stories/button/Button";
 import { Input } from "../Stories/input/Input";
 import * as EmailValidator from "email-validator";
 import { SuccessLeftBar } from "../SuccessLeftBar/SuccessLeftBar";
-import {Logo} from '../Stories/logo/Logo';
+
+import rightlogo from "../Stories/assets/logo_right_con.svg";
+
 export const HireTeamPage = ({ ...props }) => {
   const [allowedcharlength, setAllowedCharLength] = useState(1000);
   const [charsleft, setCharsLeft] = useState(1000);
@@ -340,7 +342,9 @@ export const HireTeamPage = ({ ...props }) => {
                 }
               >
                 <div className="rht_content_header">
-                <Logo />
+                  <div className="right_logo">
+                    <img src={rightlogo} alt="" />
+                  </div>
                   <h2>I am looking for...</h2>
                   <div className="step_nos">
                     Step <span>1</span> of <span>6</span>
@@ -389,6 +393,9 @@ export const HireTeamPage = ({ ...props }) => {
                 }
               >
                 <div className="rht_content_header">
+                  <div className="right_logo">
+                    <img src={rightlogo} alt="" />
+                  </div>
                   <h2>What type of project are you hiring for?</h2>
                   <div className="step_nos">
                     Step <span>2</span> of <span>6</span>
@@ -502,6 +509,9 @@ export const HireTeamPage = ({ ...props }) => {
                 }
               >
                 <div className="rht_content_header">
+                  <div className="right_logo">
+                    <img src={rightlogo} alt="" />
+                  </div>
                   <h2>How long do you need the resource?</h2>
                   <div className="step_nos">
                     Step <span>3</span> of <span>6</span>
@@ -644,6 +654,9 @@ export const HireTeamPage = ({ ...props }) => {
                 }
               >
                 <div className="rht_content_header">
+                  <div className="right_logo">
+                    <img src={rightlogo} alt="" />
+                  </div>
                   <h2>How many resources you need?</h2>
                   <div className="step_nos">
                     Step <span>4</span> of <span>6</span>
@@ -750,6 +763,9 @@ export const HireTeamPage = ({ ...props }) => {
                 }
               >
                 <div className="rht_content_header">
+                  <div className="right_logo">
+                    <img src={rightlogo} alt="" />
+                  </div>
                   <h2>What skills would you like to see in your new hire?</h2>
                   <div className="step_nos">
                     Step <span>5</span> of <span>6</span>
@@ -853,6 +869,9 @@ export const HireTeamPage = ({ ...props }) => {
                 )}
 
                 <div className="rht_content_header">
+                  <div className="right_logo">
+                    <img src={rightlogo} alt="" />
+                  </div>
                   <h2>Successful! Let us connect you with the talent.</h2>
                   <div className="step_nos">
                     Step <span>6</span> of <span>6</span>
