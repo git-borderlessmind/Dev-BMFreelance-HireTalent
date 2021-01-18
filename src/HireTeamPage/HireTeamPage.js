@@ -933,29 +933,19 @@ export const HireTeamPage = ({ ...props }) => {
                       <label htmlFor="acknowledgement">
                         By submitting you acknowledge that you have read and
                         agree to our&nbsp;
-                        <Link
+                        {/* <Link
                           to="/terms-and-conditions"
                           target="_blank"
                           className="bm-link"
                         >
                           Terms and Conditions
                         </Link>
-                        ,&nbsp;
-                        <Link
-                          to="/privacy-policy"
-                          target="_blank"
-                          className="bm-link"
-                        >
-                          Privacy Policy
-                        </Link>{" "}
+                        ,&nbsp; */}
+                        <a href="https://www.borderlessmind.com/privacy-policy/" target="_blank" className="bm-link">Privacy Policy
+                        </a>{" "}
                         and&nbsp;
-                        <Link
-                          to="/cookie-policy"
-                          target="_blank"
-                          className="bm-link"
-                        >
-                          Cookie Policy
-                        </Link>
+                        <a href="https://www.borderlessmind.com/privacy-policy/" target="_blank" className="bm-link">Cookie Policy
+                        </a>
                         .
                       </label>
                     </div>
