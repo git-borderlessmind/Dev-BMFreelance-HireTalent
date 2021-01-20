@@ -15,6 +15,8 @@ import * as EmailValidator from "email-validator";
 import { SuccessLeftBar } from "../SuccessLeftBar/SuccessLeftBar";
 
 import rightlogo from "../Stories/assets/logo_right_con.svg";
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 export const HireTeamPage = ({ ...props }) => {
   const [allowedcharlength, setAllowedCharLength] = useState(1000);
@@ -39,14 +41,17 @@ export const HireTeamPage = ({ ...props }) => {
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [contactname, setContactName] = useState("");
+  const [phonenumber, setPhoneNumber] = useState("");
+  const [phonenumbercountry, setPhoneNumberCountry] = useState("");
   const [emailTouched, setEmailTouched] = useState(false);
   const [companyTouched, setCompanyTouched] = useState(false);
   const [contactnameTouched, setContactnameTouched] = useState(false);
+  const [phonenumberTouched, setPhoneNumberTouched] = useState(false);
   const [validemail, checkValidEmail] = useState(false);
   const [propcessing, setProcessing] = useState(false);
   const [successmessage, setSuccessMessage] = useState("");
   const [errormessage, setErrorMessage] = useState("");
-
+  const [submitted, setSubmitted] = useState(false);  
   const dispatch = useDispatch();
   const renderHTML = (rawHTML) =>
     React.createElement("div", {
@@ -233,6 +238,12 @@ export const HireTeamPage = ({ ...props }) => {
     setContactName(e.target.value);
     setContactnameTouched(true);
   }
+  function handleChangePhoneNumber(value, country, e, formattedValue){
+    console.log(country.name, formattedValue);
+    setPhoneNumber(formattedValue);
+    setPhoneNumberCountry(country.name);
+    setPhoneNumberTouched(true);
+  }
 
   function handleStepOne() {
     setDisplayStep("2");
@@ -253,6 +264,7 @@ export const HireTeamPage = ({ ...props }) => {
     setEmailTouched(true);
     setCompanyTouched(true);
     setContactnameTouched(true);
+    setPhoneNumberTouched(true);
 
     var requestdata = {
       job_type: job_type,
@@ -264,8 +276,10 @@ export const HireTeamPage = ({ ...props }) => {
       email: email,
       company: company,
       contactname: contactname,
+      phonenumber: phonenumber,
+      phonenumbercountry: phonenumbercountry
     };
-    if (email != "" && company != "" && contactname != "") {
+    if (email != "" && company != "" && contactname != "" && phonenumber != "" && phonenumbercountry != "") {
       setProcessing(true);
       dispatch(
         userActions.submitHireTalentRequest(requestdata, (returndata) => {
@@ -928,6 +942,22 @@ export const HireTeamPage = ({ ...props }) => {
                         isTouched={contactnameTouched}
                         isValid={contactname ? true : false}
                       />
+                    </span>
+                    <span className="contact_field">
+                    <PhoneInput 
+                    placeholder="Phone Number"
+                    country={'us'}
+                    value={phonenumber}
+                    onChange={handleChangePhoneNumber} 
+                    inputProps={{
+                      name: 'phonenumber',
+                      required: true
+                    }}
+                  />
+                    <span className={contactnameTouched && phonenumber === '' ? 'input-error dirty-text' : 'hide_error'}>
+                        Phone Number Is Required. 
+                    </span>
+                    <div className={contactnameTouched && phonenumber !== '' ? 'valid-phone' : 'hide_error'}></div>
                     </span>
                     <div className="checkterms">
                       <label htmlFor="acknowledgement">

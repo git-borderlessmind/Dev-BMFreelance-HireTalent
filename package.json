@@ -43,6 +43,7 @@
     "react-ellipsis-text": "^1.2.1",
     "react-fetch-progressbar": "^1.0.0",
     "react-file-reader": "^1.1.4",
+    "react-phone-input-2": "^2.13.9",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.4",

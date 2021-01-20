@@ -11,7 +11,12 @@ export const Input = ({ customClass, value, hasIcon,pattern, isEmailValid, confi
   const valid = isValid ? 'input-valid' : '';
   const validemail = isEmailValid ? 'input-valid' : '';
   const isInputDisabled = isDisabled ? true : false;
-  const labelname = name.replaceAll("_", " ");
+  let labelname = name.replaceAll("_", " ");
+
+  if(labelname == 'contactname'){
+    labelname = 'Contact Name';
+  }
+
   const InputHasIcon = hasIcon? 'has-icon' : 'no-icon';
   if(maxlength == '' || maxlength == undefined){
     maxlength = 200;
