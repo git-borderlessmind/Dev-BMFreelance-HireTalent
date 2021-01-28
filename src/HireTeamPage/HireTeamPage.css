@@ -289,11 +289,12 @@
 .inner_rht_content .steps_content ul.listing li .radio,
 .inner_rht_content .steps_content ul.listing li .checkbox,
 .inner_rht_content .steps_content ul.listing li .content {
-  display: inline-flex;
+  /* display: inline-flex;
   align-items: flex-start;
-  flex-wrap: wrap;
-  width: calc(100% - 30px);
+  flex-wrap: wrap; */
+  width: 100%;
 }
+.inner_rht_content .steps_content ul.listing li .radio label {width: calc(100% - 20px); padding-left: 20px;}
 .inner_rht_content .steps_content {
   max-height: calc(100% - 260px);
   overflow-y: auto;
@@ -318,10 +319,10 @@
   display: block;
   width: 100%;
 }
-.inner_rht_content .steps_content ul.listing li .radio,
+/* .inner_rht_content .steps_content ul.listing li .radio,
 .inner_rht_content .steps_content ul.listing li .checkbox {
   width: 30px;
-}
+} */
 
 /**** custom radio and checkbox ****/
 .radio,
@@ -338,7 +339,7 @@
   margin-right: 10px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 2px;
   border: 1px solid #1c94d2;
   background-color: #fff;
 }
@@ -376,6 +377,7 @@
 .inner_rht_content .steps_content ul {
   max-height: calc(100vh - 160px);
   overflow-y: auto;
+  padding-left: 0;
 }
 .inner_rht_content .steps_content ul::-webkit-scrollbar {
   width: 5px;
