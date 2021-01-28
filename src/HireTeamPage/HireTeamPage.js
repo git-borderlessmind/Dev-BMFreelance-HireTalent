@@ -381,13 +381,14 @@ export const HireTeamPage = ({ ...props }) => {
                               checked={job_type == jobtype.value ? true : false}
                               onChange={handleChangeJobType}
                             />
-                            <label htmlFor={"job_type_" + index}></label>
-                          </div>
-                          <div className="content">
-                            <h6>{jobtype.label}</h6>
-                            <div className="skillstext">
-                              {renderHTML(jobtype.topskills)}
+                            <label htmlFor={"job_type_" + index}>
+                              <div className="content">
+                              <h6>{jobtype.label}</h6>
+                              <div className="skillstext">
+                                {renderHTML(jobtype.topskills)}
+                              </div>
                             </div>
+                            </label>
                           </div>
                         </li>
                       );
@@ -434,10 +435,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeTypeOfProject}
                         />
-                        <label htmlFor="new_project"></label>
-                      </div>
-                      <div className="content">
-                        <p>New idea or project</p>
+                        <label htmlFor="new_project">
+                          <div className="content">
+                            <p>New idea or project</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                     <li>
@@ -455,10 +457,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeTypeOfProject}
                         />
-                        <label htmlFor="existing_project"></label>
-                      </div>
-                      <div className="content">
-                        <p>Existing project that needs more resources</p>
+                        <label htmlFor="existing_project">
+                          <div className="content">
+                            <p>Existing project that needs more resources</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                     <li>
@@ -476,10 +479,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeTypeOfProject}
                         />
-                        <label htmlFor="ongoing_assistance"></label>
-                      </div>
-                      <div className="content">
-                        <p>Ongoing assistance or consultation</p>
+                        <label htmlFor="ongoing_assistance">
+                          <div className="content">
+                            <p>Ongoing assistance or consultation</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                     <li>
@@ -497,12 +501,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeTypeOfProject}
                         />
-                        <label htmlFor="none"></label>
-                      </div>
-                      <div className="content">
-                        <p>
-                          None of the above, I am just exploring Borderlessmind
-                        </p>
+                        <label htmlFor="none">
+                          <div className="content">
+                            <p>None of the above, I am just exploring Borderlessmind</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                   </ul>
@@ -550,10 +553,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeDurationOfProject}
                         />
-                        <label htmlFor="less_than_1_week"></label>
-                      </div>
-                      <div className="content">
-                        <p>Less than 1 week</p>
+                        <label htmlFor="less_than_1_week">
+                          <div className="content">
+                            <p>Less than 1 week</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                     <li>
@@ -568,10 +572,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeDurationOfProject}
                         />
-                        <label htmlFor="1_to_4_weeks"></label>
-                      </div>
-                      <div className="content">
-                        <p>1 to 4 weeks</p>
+                        <label htmlFor="1_to_4_weeks">
+                          <div className="content">
+                            <p>1 to 4 weeks</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                     <li>
@@ -586,10 +591,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeDurationOfProject}
                         />
-                        <label htmlFor="1_to_3_months"></label>
-                      </div>
-                      <div className="content">
-                        <p>1 to 3 months</p>
+                        <label htmlFor="1_to_3_months">
+                          <div className="content">
+                            <p>1 to 3 months</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                     <li>
@@ -604,10 +610,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeDurationOfProject}
                         />
-                        <label htmlFor="3_to_6_months"></label>
-                      </div>
-                      <div className="content">
-                        <p>3 to 6 months</p>
+                        <label htmlFor="3_to_6_months">
+                          <div className="content">
+                            <p>3 to 6 months</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                     <li>
@@ -624,10 +631,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeDurationOfProject}
                         />
-                        <label htmlFor="longer_than_6_months"></label>
-                      </div>
-                      <div className="content">
-                        <p>Longer than 6 months</p>
+                        <label htmlFor="longer_than_6_months">
+                          <div className="content">
+                            <p>Longer than 6 months</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                     <li>
@@ -644,10 +652,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeDurationOfProject}
                         />
-                        <label htmlFor="not_sure_I_ll_decide_later"></label>
-                      </div>
-                      <div className="content">
-                        <p>Not sure, I'll decide later</p>
+                        <label htmlFor="not_sure_I_ll_decide_later">
+                          <div className="content">
+                            <p>Not sure, I'll decide later</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                   </ul>
@@ -691,10 +700,11 @@ export const HireTeamPage = ({ ...props }) => {
                           checked={numberofresources == "Only One" ? true : false}
                           onChange={handleChangeNumberOfResources}
                         />
-                        <label htmlFor="only_1"></label>
-                      </div>
-                      <div className="content">
-                        <p>Only One</p>
+                        <label htmlFor="only_1">
+                          <div className="content">
+                            <p>Only One</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                     <li>
@@ -709,10 +719,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeNumberOfResources}
                         />
-                        <label htmlFor="multiple"></label>
-                      </div>
-                      <div className="content">
-                        <p>Multiple</p>
+                        <label htmlFor="multiple">
+                          <div className="content">
+                            <p>Multiple</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                     <li>
@@ -730,13 +741,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeNumberOfResources}
                         />
-                        <label htmlFor="cross_functional_team"></label>
-                      </div>
-                      <div className="content">
-                        <p>
-                          A cross-functional team (developers, designers,
-                          managers etc)
-                        </p>
+                        <label htmlFor="cross_functional_team">
+                          <div className="content">
+                            <p>A cross-functional team (developers, designers, managers etc)</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                     <li>
@@ -753,10 +762,11 @@ export const HireTeamPage = ({ ...props }) => {
                           }
                           onChange={handleChangeNumberOfResources}
                         />
-                        <label htmlFor="num_resources_not_sure"></label>
-                      </div>
-                      <div className="content">
-                        <p>Not sure, I'll decide later</p>
+                        <label htmlFor="num_resources_not_sure">
+                          <div className="content">
+                            <p>Not sure, I'll decide later</p>
+                          </div>
+                        </label>
                       </div>
                     </li>
                   </ul>
