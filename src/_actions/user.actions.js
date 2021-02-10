@@ -8,6 +8,7 @@ export const userActions = {
   getalljobtypes,
   getalljobtypeswithskills,
   getJobTypeSkills,
+  getSkillsOfAllParents,
   searchFreelancers,
   submitHireTalentRequest,
 };
@@ -91,6 +92,31 @@ function getJobTypeSkills(jobtypeid, callback) {
   return (dispatch) => {
     dispatch(request({}));
     userService.getJobTypeSkills(jobtypeid).then(
+      (data) => {
+        dispatch(success(data));
+        callback(data);
+      },
+      (error) => {
+        dispatch(failure(error.toString()));
+        callback(error);
+      }
+    );
+  };
+  function request(data) {
+    return { type: userConstants.GENERAL_REQUEST, data };
+  }
+  function success(data) {
+    return { type: userConstants.GENERAL_SUCCESS, data };
+  }
+  function failure(data) {
+    return { type: userConstants.GENERAL_FAILURE, data };
+  }
+}
+
+function getSkillsOfAllParents(callback) {
+  return (dispatch) => {
+    dispatch(request({}));
+    userService.getSkillsOfAllParents().then(
       (data) => {
         dispatch(success(data));
         callback(data);
