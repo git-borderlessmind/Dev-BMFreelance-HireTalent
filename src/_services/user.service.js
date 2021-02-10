@@ -7,6 +7,7 @@ export const userService = {
     getalljobtypes,
     getalljobtypeswithskills,
     getJobTypeSkills,
+    getSkillsOfAllParents,
     searchFreelancers,
     submitHireTalentRequest
 };
@@ -87,6 +88,15 @@ function getJobTypeSkills(jobtypeid) {
     };
 
     return fetch(`${config.apiUrl}/api/bm/getJobTypeSkills?jobtypeid=${jobtypeid}`, requestOptions).then(handleResponse);
+}
+
+function getSkillsOfAllParents() {
+    const requestOptions = {
+        crossDomain:true,
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+    };
+    return fetch(`${config.apiUrl}/api/bm/getallskills`, requestOptions).then(handleResponse);
 }
 
 function searchFreelancers(searchcriteria) {
