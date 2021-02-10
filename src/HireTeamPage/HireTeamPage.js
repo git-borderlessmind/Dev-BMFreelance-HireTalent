@@ -99,7 +99,6 @@ export const HireTeamPage = ({ ...props }) => {
     dispatch(
       userActions.getJobTypeSkills(jobtypeid, (dataskills) => {
         const skillsarray = [];
-        const allskillsarray = [];
         var i = 0;
         dataskills.data.forEach((element) => {
           i++;
@@ -109,14 +108,23 @@ export const HireTeamPage = ({ ...props }) => {
               label: element.name,
             });
           }
+        });
+        setSkills(skillsarray);
+        setSelectedJobTypeTitle(dataskills.jobtype.title);
+      })
+    );
+  }
+
+  function fetchSkillsOfAllParents() {
+    dispatch(
+      userActions.getSkillsOfAllParents((dataskills) => {
+        const allskillsarray = [];
+        dataskills.data.forEach((element) => {
           allskillsarray.push({
             value: element.id,
             label: element.name,
           });
         });
-        setSkills(skillsarray);
-        setSelectedJobTypeTitle(dataskills.jobtype.title);
-
         if (allskillsarray.length) {
           let lowerCasedSkills = allskillsarray.map((skl) => {
             return {
@@ -129,6 +137,8 @@ export const HireTeamPage = ({ ...props }) => {
       })
     );
   }
+
+
   function addMoreSkills(selectedSkill) {
     lowerCasedSkills.forEach((element) => {
       if (element.name == selectedSkill) {
@@ -321,6 +331,7 @@ export const HireTeamPage = ({ ...props }) => {
   useEffect(() => {
     if (job_type != "") {
       fetchSkills(job_type);
+      fetchSkillsOfAllParents();
     }
   }, [job_type]);
 
